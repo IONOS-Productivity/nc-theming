@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>ncthemingionos</id>
+	<name>Nc Theming Ionos</name>
+	<summary>IONOS Theme</summary>
+	<description>IONOS Theme</description>
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+	<author mail="kupriyanov@strato.de" homepage="https://github.com/IONOS-Productivity/nc-theming-ionos/">IONOS</author>
+	<namespace>NcThemingIonos</namespace>
+	<category>customization</category>
+	<bugs>https://github.com/IONOS-Productivity/nc-theming-ionos/issues</bugs>
+	<dependencies>
+		<nextcloud min-version="29" max-version="29"/>
+	</dependencies>
+	<!--
+	- no navigations configured, we'll redirect from the /app/settings path
+	- the navigation would be "simplesettings.page.index"
+	-->
+</info>
