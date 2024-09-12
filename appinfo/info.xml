@@ -14,13 +14,7 @@
 	<dependencies>
 		<nextcloud min-version="29" max-version="29"/>
 	</dependencies>
-	<navigations>
-		<navigation>
-			<id>ncthemingionos</id>
-			<name>Nc Theming Ionos</name>
-			<route>ncthemingionos.page.index</route>
-			<icon>app.svg</icon>
-			<type>link</type>
-		</navigation>
-	</navigations>
+	<!--
+	- no navigations configured
+	-->
 </info>
