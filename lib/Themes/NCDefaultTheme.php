@@ -77,8 +77,47 @@ class NCDefaultTheme extends DefaultTheme implements ITheme {
 		$defaultVariables = parent::getCSSVariables();
 		$originalFontFace = $defaultVariables['--font-face'];
 
+		// IONOS COLORS
+		$ionColorMainBackground = '#fff';
+		$ionColorPrimary = '#003d8f';
+		$ionColorSecondary = '#001b41';
+		$ionColorBlueB1 = '#dbedf8';
+		$ionColorBlueB2 = '#95caeb';
+		$ionColorBlueB4 = '#1474c4';
+		$ionColorCoolGrayC1 = '#f4f7fa';
+		$ionColorCoolGrayC2 = '#dbe2e8';
+		$ionColorCoolGrayC3 = '#bcc8d4';
+		$ionColorCoolGrayC5 = '#718095';
+		$ionColorTypoMild = '#2e4360';
+		$ionColorLightGray = '#d7d7d7';
+
+		$ionColorGreenG3 = '#12cf76';
+		$ionColorRoseR3 = '#ff6159';
+		$ionColorSkyS3 = '#11c7e6';
+		$ionColorAmberY3 = '#ffaa00';
+
+		$ionosVariables = [
+			'--ion-color-main-background' => $ionColorMainBackground,
+			'--ion-color-primary' => $ionColorPrimary,
+			'--ion-color-secondary' => $ionColorSecondary,
+			'--ion-color-blue-b1' => $ionColorBlueB1,
+			'--ion-color-blue-b2' => $ionColorBlueB2,
+			'--ion-color-blue-b4' => $ionColorBlueB4,
+			'--ion-color-cool-gray-c1' => $ionColorCoolGrayC1,
+			'--ion-color-cool-gray-c2' => $ionColorCoolGrayC2,
+			'--ion-color-cool-gray-c3' => $ionColorCoolGrayC3,
+			'--ion-color-cool-gray-c5' => $ionColorCoolGrayC5,
+			'--ion-color-typo-mild' => $ionColorTypoMild,
+			'--ion-color-light-gray' => $ionColorLightGray,
+			'--ion-color-green-g3' => $ionColorGreenG3,
+			'--ion-color-rose-r3' => $ionColorRoseR3,
+			'--ion-color-sky-s3' => $ionColorSkyS3,
+			'--ion-color-amber-y3' => $ionColorAmberY3,
+		];
+
 		return array_merge(
 			$defaultVariables,
+			$ionosVariables,
 			[
 				'--font-face' => '"Open sans", ' . $originalFontFace
 			]
