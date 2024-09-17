@@ -1,5 +1,6 @@
 <?php
 /**
+ * SPDX-FileLicenseText: 2023 T-Systems International
  * SPDX-FileLicenseText: 2024 STRATO AG
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
@@ -36,29 +37,36 @@ class Application extends App implements IBootstrap {
 	}
 
 	/**
-	 * Get the container for another app in order to override services
-	 * @param string $appName the name of the app to get the container for
+	 * Get the container for the "theming" core app
 	 * @return DIContainer
 	 */
-	public function getAppContainer(string $appName) {
+	public function getCoreThemingAppContainer(): DIContainer {
+		$appName = 'theming';
+
+		// Apps are registered in an order controlled by the server. As of date
+		// of authoring the order is alphabetical. This means the core "theming"
+		// might get registered after our theming app.
+		// Here we handle both cases, eventually registering the "theming"
+		// ourselves in case it could not be looked up.
 		try {
 			$container = \OC::$server->getRegisteredAppContainer($appName);
 		} catch (QueryException) {
 			$container = new DIContainer($appName);
-			\OC::$server->registerAppContainer($appName, $container);
 		}
 
 		return $container;
 	}
 
 	public function register(IRegistrationContext $context): void {
-		$this->getAppContainer('theming')->registerService(ThemesService::class, function ($c) {
+		// Replace service registration for the ThemeService by our wrapper
+		// Inspired by https://github.com/nextmcloud/nmctheme/
+		$this->getCoreThemingAppContainer()->registerService(ThemesService::class, function ($c) {
 			return new NcThemesService(
 				$c->get(IUserSession::class),
 				$c->get(IConfig::class),
 				$c->get(LoggerInterface::class),
 				$c->get(NCDefaultTheme::class),
-				$c->get(DefaultTheme::class),   // the rest is overhead due to undefined interface (yet)
+				$c->get(DefaultTheme::class),
 				$c->get(LightTheme::class),
 				$c->get(DarkTheme::class),
 				$c->get(HighContrastTheme::class),
