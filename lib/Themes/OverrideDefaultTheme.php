@@ -80,6 +80,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionColorBlueB1 = '#dbedf8';
 		$ionColorBlueB2 = '#95caeb';
 		$ionColorBlueB4 = '#1474c4';
+		$ionColorBlueB5 = '#095BB1'; /* new */
 		$ionColorCoolGreyC1 = '#f4f7fa';
 		$ionColorCoolGreyC2 = '#dbe2e8';
 		$ionColorCoolGreyC3 = '#bcc8d4';
@@ -99,6 +100,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--ion-color-blue-b1' => $ionColorBlueB1,
 			'--ion-color-blue-b2' => $ionColorBlueB2,
 			'--ion-color-blue-b4' => $ionColorBlueB4,
+			'--ion-color-blue-b5' => $ionColorBlueB5,
 			'--ion-color-cool-grey-c1' => $ionColorCoolGreyC1,
 			'--ion-color-cool-grey-c2' => $ionColorCoolGreyC2,
 			'--ion-color-cool-grey-c3' => $ionColorCoolGreyC3,
@@ -289,7 +291,33 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			font-display: swap;
 		}
 
-				[data-cy-files-navigation].app-navigation {
+		.button-vue.button-vue--size-normal:is(button) {
+			outline: 1px solid #f00; /* debug */
+			border-radius: 2px;
+		}
+
+		/*
+		 * Two selectors for :hover and :active according to spec [1] because
+		 * the NcButton component CSS defines them in the wrong order and have
+		 * to correct the style, can't just override color variables.
+		 *
+		 * [1]: https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+		 */
+
+		 /*
+		  * Note: colors according to Style guide
+		  */
+
+		.button-vue.button-vue--vue-primary:is(button):hover:not(:disabled) {
+			background-color: var(--ion-color-blue-b4);
+		}
+
+		/* :not(:disabled) added to make the selector stronger */
+		.button-vue.button-vue--vue-primary:is(button):active:not(:disabled) {
+			background-color: var(--ion-color-blue-b5);
+		}
+
+		[data-cy-files-navigation].app-navigation {
 			background-color: var(--ion-color-cool-grey-c1) !important;
 			.app-navigation-entry {
 				&.active[data-v-c00d5366] {
@@ -305,7 +333,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 					background-color: var(--ion-color-cool-grey-c2) !important;
 				}
 			}
-			
+
 			.app-navigation-entry--opened:has(.app-navigation-entry__children) {
 				background: var(--ion-color-main-background) !important;
 				.app-navigation-entry__children {
@@ -333,14 +361,14 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 				.files-list__row-actions {
 					.action-items {
 						color: var(--ion-color-blue-b4) !important;
-					}	
-					
+					}
+
 					.icon-vue {
 						color: var(--ion-color-blue-b4) !important;
 					}
 					.material-design-icon{
 						color: var(--ion-color-blue-b4) !important;
-					}	
+					}
 				}
 			}
 			.material-design-icon .checkbox-blank-outline-icon {
