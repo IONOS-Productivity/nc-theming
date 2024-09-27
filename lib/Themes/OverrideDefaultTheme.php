@@ -19,6 +19,7 @@ use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
+use OCA\NcTheming\Themes\CustomCss;
 
 class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 	public function __construct(
@@ -250,7 +251,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$boldTtf = $this->urlGenerator->linkTo('nc_theming', 'fonts/OpenSans/OpenSans-Bold-webfont.ttf');
 		$boldSvg = $this->urlGenerator->linkTo('nc_theming', 'fonts/OpenSans/OpenSans-Bold-webfont.svg#open_sansregular');
 
-		return "
+		$fontCss = "
 		@font-face {
 			font-family: 'Open sans';
 			src: url('$regularEot') format('embedded-opentype'),
@@ -289,5 +290,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			font-display: swap;
 		}
 		";
+
+		return CustomCss::$CSS . PHP_EOL . $fontCss;
 	}
 }

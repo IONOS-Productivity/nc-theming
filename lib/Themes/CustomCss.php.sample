@@ -1,0 +1,14 @@
+<?php
+/**
+ * SPDX-FileLicenseText: 2024 STRATO AG
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+namespace OCA\NcTheming\Themes;
+
+class CustomCss {
+	public static string $CSS = "
+	/* Generated custom CSS - Please run make build_css */
+	/* End of generated custom CSS */
+	";
+}
