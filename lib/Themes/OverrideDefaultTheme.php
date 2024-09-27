@@ -250,7 +250,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$boldTtf = $this->urlGenerator->linkTo('nc_theming', 'fonts/OpenSans/OpenSans-Bold-webfont.ttf');
 		$boldSvg = $this->urlGenerator->linkTo('nc_theming', 'fonts/OpenSans/OpenSans-Bold-webfont.svg#open_sansregular');
 
-		return "
+		$fontCss = "
 		@font-face {
 			font-family: 'Open sans';
 			src: url('$regularEot') format('embedded-opentype'),
@@ -288,71 +288,8 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			font-style: normal;
 			font-display: swap;
 		}
-
-				[data-cy-files-navigation].app-navigation {
-			background-color: var(--ion-color-cool-grey-c1) !important;
-			.app-navigation-entry {
-				&.active[data-v-c00d5366] {
-					background-color: var(--ion-color-cool-grey-c3) !important;
-					.app-navigation-entry-link[data-v-c00d5366] {
-						color: var(--ion-color-secondary) !important;
-					}
-					&:hover {
-						background-color: var(--ion-color-cool-grey-c3) !important;
-					}
-				}
-				&:hover {
-					background-color: var(--ion-color-cool-grey-c2) !important;
-				}
-			}
-			
-			.app-navigation-entry--opened:has(.app-navigation-entry__children) {
-				background: var(--ion-color-main-background) !important;
-				.app-navigation-entry__children {
-					gap: 0;
-					.app-navigation-entry-wrapper {
-						background: var(--ion-color-main-background) !important;
-					}
-				}
-			}
-		}
-		.files-list {
-			.files-list__row {
-				&:hover {
-					background-color: var(--ion-color-cool-grey-c2) !important;
-				}
-				&.active {
-					background-color: var(--ion-color-cool-grey-c2) !important;
-				}
-				.files-list__row-icon {
-					color: var(--ion-color-blue-b4) !important;
-				}
-				.files-list__row-checkbox  {
-					color: red;
-				}
-				.files-list__row-actions {
-					.action-items {
-						color: var(--ion-color-blue-b4) !important;
-					}	
-					
-					.icon-vue {
-						color: var(--ion-color-blue-b4) !important;
-					}
-					.material-design-icon{
-						color: var(--ion-color-blue-b4) !important;
-					}	
-				}
-			}
-			.material-design-icon .checkbox-blank-outline-icon {
-					color: var(--ion-color-cool-grey-c5) !important;
-			}
-			.material-design-icon.checkbox-marked-icon {
-				color: var(--ion-color-blue-b4) !important;
-			}
-			.material-design-icon minus-box-icon {
-				color: var(--ion-color-blue-b4) !important;
-			}
-		}
 		";
+
+		return CustomCss::$CSS . PHP_EOL . $fontCss;
 	}
 }
