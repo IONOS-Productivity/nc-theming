@@ -1,26 +1,23 @@
-[data-cy-files-navigation].app-navigation {
-	background-color: var(--ion-color-cool-grey-c1) !important;
+div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
+	background-color: var(--ion-color-cool-grey-c1);
 	.app-navigation-entry {
 		&.active {
 			background-color: var(--ion-color-cool-grey-c3) !important;
 			.app-navigation-entry-link {
 				color: var(--ion-color-secondary) !important;
 			}
-			&:hover {
-				background-color: var(--ion-color-cool-grey-c3) !important;
-			}
 		}
 		&:hover {
-			background-color: var(--ion-color-cool-grey-c2) !important;
+			background-color: var(--ion-color-cool-grey-c2);
 		}
 	}
 	
 	.app-navigation-entry--opened:has(.app-navigation-entry__children) {
-		background: var(--ion-color-main-background) !important;
+		background: var(--ion-color-main-background);
 		.app-navigation-entry__children {
 			gap: 0;
 			.app-navigation-entry-wrapper {
-				background: var(--ion-color-main-background) !important;
+				background: var(--ion-color-main-background);
 			}
 		}
 	}
