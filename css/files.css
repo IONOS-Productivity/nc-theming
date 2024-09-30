@@ -1,27 +1,26 @@
-.files-list {
+div[data-cy-files-list].files-list {
 	.files-list__row {
 		&:hover {
-			background-color: var(--ion-color-cool-grey-c2) !important;
+			background-color: var(--ion-color-cool-grey-c2);
 		}
 		&.active {
-			background-color: var(--ion-color-cool-grey-c2) !important;
+			background-color: var(--ion-color-cool-grey-c2);
 		}
 		.files-list__row-icon {
-			color: var(--ion-color-blue-b4) !important;
+			color: var(--ion-color-blue-b4);
 		}
 		.files-list__row-checkbox  {
 			color: red;
 		}
 		.files-list__row-actions {
 			.action-items {
-				color: var(--ion-color-blue-b4) !important;
+				color: var(--ion-color-blue-b4);
 			}	
-			
 			.icon-vue {
-				color: var(--ion-color-blue-b4) !important;
+				color: var(--ion-color-blue-b4);
 			}
 			.material-design-icon{
-				color: var(--ion-color-blue-b4) !important;
+				color: var(--ion-color-blue-b4);
 			}	
 		}
 	}
