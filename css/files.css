@@ -9,9 +9,6 @@ div[data-cy-files-list].files-list {
 		.files-list__row-icon {
 			color: var(--ion-color-blue-b4);
 		}
-		.files-list__row-checkbox  {
-			color: red;
-		}
 		.files-list__row-actions {
 			.action-items {
 				color: var(--ion-color-blue-b4);
