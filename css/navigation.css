@@ -1,6 +1,7 @@
 div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 	background-color: var(--ion-color-cool-grey-c1);
 	.app-navigation-entry {
+		border-radius: var(--border-radius-pill);
 		&.active {
 			background-color: var(--ion-color-cool-grey-c3) !important;
 			.app-navigation-entry-link {
@@ -11,13 +12,19 @@ div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 			background-color: var(--ion-color-cool-grey-c2);
 		}
 	}
-	
+
 	.app-navigation-entry--opened:has(.app-navigation-entry__children) {
 		background: var(--ion-color-main-background);
+		border-radius: 8px;
 		.app-navigation-entry__children {
+			padding: 0 8px;
 			gap: 0;
+			.app-navigation-entry {
+				border-radius: 4px;
+			}
 			.app-navigation-entry-wrapper {
 				background: var(--ion-color-main-background);
+				border-radius: 8px;
 			}
 		}
 	}
