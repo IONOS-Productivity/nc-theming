@@ -22,12 +22,12 @@ div[data-cy-files-list].files-list {
 		}
 	}
 	.material-design-icon.checkbox-blank-outline-icon {
-		color: var(--ion-color-cool-grey-c5) !important;
+		color: var(--ion-color-cool-grey-c5);
 	}
 	.material-design-icon.checkbox-marked-icon {
-		color: var(--ion-color-blue-b4) !important;
+		color: var(--ion-color-blue-b4);
 	}
 	.material-design-icon.minus-box-icon {
-		color: var(--ion-color-blue-b4) !important;
+		color: var(--ion-color-blue-b4);
 	}
 }
