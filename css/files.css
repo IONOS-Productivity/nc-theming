@@ -31,3 +31,47 @@ div[data-cy-files-list].files-list {
 		color: var(--ion-color-blue-b4);
 	}
 }
+
+div.v-popper--theme-dropdown.v-popper__popper:has(.v-popper__wrapper) {
+	border-radius: 16px;
+	filter: none;
+
+	div.v-popper__wrapper {
+		border-radius: inherit;
+		border: 1px solid var(--ion-color-blue-b4);
+
+		div.v-popper__inner {
+			padding: 2px 12px;
+			background-color: var(--color-main-background);
+
+			li.action:has(button.action-button) {
+				&.active {
+					background-color: var(--ion-color-blue-b1);
+				}
+
+				button.action-button {
+					border-radius: 8px;
+					color: var(--ion-color-secondary);
+					font-style: normal;
+					font-weight: 600;
+					margin-top: 12px;
+					margin-bottom: 12px;
+
+					&:active {
+						background-color: var(--ion-color-blue-b2);
+					}
+
+					&:disabled {
+						color: var(--ion-color-cool-grey-c4);
+						background-color: var(--color-main-background);
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+
+		div.v-popper__arrow-container:has(div.v-popper__arrow-inner) {
+			display: none;
+		}
+	}
+}
