@@ -1,0 +1,7 @@
+.unified-search-modal {
+	div.unified-search-modal__filters[data-cy-unified-search-filters] {
+		[data-cy-unified-search-filter]:not([data-cy-unified-search-filter="date"]) {
+			display: none;
+		}
+	}
+}
