@@ -1,8 +1,8 @@
 #body-user {
-	div.files-list__header:has(div.files-list__breadcrumbs) {
-		div.files-list__breadcrumbs {
+	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
+		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
-				a, a:hover, a:active, a:disabled {
+				a, a:hover, a:active, a:disabled, button {
 					padding: 2px 0;
 					font-weight: 400;
 					color: var(--ion-color-secondary);
