@@ -36,16 +36,16 @@ class OverrideThemesService extends ThemesService {
 	 *                                used as fallback. It is also selectable.
 	 */
 	public function __construct(
-		IUserSession          $userSession,
-		IConfig               $config,
-		LoggerInterface       $logger,
-		ITheme                $defaultOverride,
-		DefaultTheme          $defaultTheme,
-		LightTheme            $lightTheme,
-		DarkTheme             $darkTheme,
-		HighContrastTheme     $highContrastTheme,
+		IUserSession $userSession,
+		IConfig $config,
+		LoggerInterface $logger,
+		ITheme $defaultOverride,
+		DefaultTheme $defaultTheme,
+		LightTheme $lightTheme,
+		DarkTheme $darkTheme,
+		HighContrastTheme $highContrastTheme,
 		DarkHighContrastTheme $darkHighContrastTheme,
-		DyslexiaFont          $dyslexiaFont) {
+		DyslexiaFont $dyslexiaFont) {
 		parent::__construct($userSession, $config, $logger, $defaultTheme, $lightTheme,
 			$darkTheme, $highContrastTheme, $darkHighContrastTheme, $dyslexiaFont);
 
