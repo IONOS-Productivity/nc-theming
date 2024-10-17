@@ -22,15 +22,15 @@ use OCP\IUserSession;
 
 class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 	public function __construct(
-		public Util            $util,
+		public Util $util,
 		public ThemingDefaults $themingDefaults,
-		public IUserSession    $userSession,
-		public IURLGenerator   $urlGenerator,
-		public ImageManager    $imageManager,
-		public IConfig         $config,
-		public IL10N           $l,
-		public IAppManager     $appManager,
-		private ?IRequest      $request,
+		public IUserSession $userSession,
+		public IURLGenerator $urlGenerator,
+		public ImageManager $imageManager,
+		public IConfig $config,
+		public IL10N $l,
+		public IAppManager $appManager,
+		private ?IRequest $request,
 	) {
 		parent::__construct(
 			$util,
