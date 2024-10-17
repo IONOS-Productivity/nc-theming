@@ -12,6 +12,11 @@
 			&:hover {
 				background-color: var(--ion-color-cool-grey-c2);
 			}
+
+			/* fix Storage Quota color after click */
+			&:focus-within:not(:active) { 
+				background-color: var(--ion-color-cool-grey-c1);
+			}
 		}
 
 		.app-navigation-entry--opened:has(.app-navigation-entry__children) {
