@@ -53,5 +53,20 @@
 				}
 			}
 		}
+
+		/* Sub Navigation Toggle Icon Button */
+		.button-vue--icon-only:not(.app-navigation-toggle) {
+			margin: 6px;
+			background-color: transparent;
+			span[role=img]>svg {
+				color: var(--ion-color-secondary);
+			}
+			&:hover {
+				background-color: transparent;
+				span[role=img]>svg {
+					color: var(--ion-color-secondary);
+				}
+			}
+		}
 	}
 }
