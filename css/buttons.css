@@ -147,7 +147,12 @@
 			}
 		}
 
-		&.button-vue--icon-only {
+		&.button-vue--icon-only,
+		.button-vue__icon {
+			height: 32px !important;
+			width: 32px !important;
+			min-width: 32px;
+			min-height: 32px;
 			&.button-vue--vue-tertiary {
 				.button-vue__icon span[role=img]>svg {
 					color: var(--ion-color-blue-b4);
