@@ -48,6 +48,10 @@
 					}
 				}
 
+				.vue-crumb {
+					align-items: center;
+				}
+
 				.vue-crumb__separator {
 					color: var(--ion-color-secondary);
 				}

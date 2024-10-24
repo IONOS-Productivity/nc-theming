@@ -296,6 +296,7 @@
 	}
 
 	.files-list__breadcrumbs, .breadcrumb__actions {
+		align-items: center;
 		gap: 8px;
 	}
 }
