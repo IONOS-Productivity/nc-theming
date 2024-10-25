@@ -87,6 +87,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionColorCoolGreyC3 = '#bcc8d4';
 		$ionColorCoolGreyC4 = '#97A3B4';
 		$ionColorCoolGreyC5 = '#718095';
+		$ionColorCoolGreyC6 = '#465A75';
 		$ionColorTypoMild = '#2e4360';
 		$ionColorLightGrey = '#d7d7d7';
 
@@ -109,6 +110,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--ion-color-cool-grey-c3' => $ionColorCoolGreyC3,
 			'--ion-color-cool-grey-c4' => $ionColorCoolGreyC4,
 			'--ion-color-cool-grey-c5' => $ionColorCoolGreyC5,
+			'--ion-color-cool-grey-c6' => $ionColorCoolGreyC6,
 			'--ion-color-typo-mild' => $ionColorTypoMild,
 			'--ion-color-light-grey' => $ionColorLightGrey,
 			'--ion-color-green-g3' => $ionColorGreenG3,
