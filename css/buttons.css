@@ -23,27 +23,35 @@
 				}
 			}
 
+			&.button-vue--vue-primary[aria-label*="Copy"],
 			&.button-vue--vue-secondary {
 				background-color: var(--ion-color-main-background);
 				border: 2px solid var(--ion-color-blue-b7);
 
-				.button-vue__text, .button-vue__icon svg {
-					color: var(--ion-color-blue-b7);
+				&:not(.action-item__menutoggle) {
+					.button-vue__text, .button-vue__icon svg {
+						color: var(--ion-color-blue-b7);
+					}
 				}
 
 				&:hover:not(:disabled) {
 					background-color: var(--ion-color-blue-b7);
+					border-color: var(--ion-color-blue-b7);
 
-					.button-vue__text, .button-vue__icon svg {
-						color: var(--ion-color-main-background);
+					&:not(.action-item--single) {
+						.button-vue__text, .button-vue__icon svg {
+							color: var(--ion-color-main-background);
+						}
 					}
 				}
 
 				&:active:not(:disabled) {
 					background-color: var(--ion-color-secondary);
 
-					.button-vue__text, .button-vue__icon svg {
-						color: var(--ion-color-main-background);
+					&:not(.action-item--single) {
+						.button-vue__text, .button-vue__icon svg {
+							color: var(--ion-color-main-background);
+						}
 					}
 				}
 			}
