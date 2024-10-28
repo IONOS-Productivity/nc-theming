@@ -24,7 +24,7 @@
 			}
 
 			&.button-vue--vue-primary[aria-label*="Copy"],
-			&.button-vue--vue-secondary {
+			&.button-vue--vue-secondary, &.button-vue--vue-tertiary[aria-label="Cancel"] {
 				background-color: var(--ion-color-main-background);
 				border: 2px solid var(--ion-color-blue-b7);
 
@@ -34,7 +34,7 @@
 					}
 				}
 
-				&:hover:not(:disabled) {
+				&:hover:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b7);
 					border-color: var(--ion-color-blue-b7);
 
@@ -45,7 +45,7 @@
 					}
 				}
 
-				&:active:not(:disabled) {
+				&:active:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-secondary);
 
 					&:not(.action-item--single) {
@@ -71,18 +71,18 @@
 					color: var(--ion-color-cool-grey-c2);
 				}
 
-				&:hover:not(:disabled) {
+				&:hover:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b4);
 					border-color: var(--ion-color-blue-b4);
 				}
 
-				&:active:not(:disabled) {
+				&:active:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b5);
 					border-color: var(--ion-color-blue-b5);
 				}
 			}
 
-			&.button-vue--vue-tertiary:not(.files-list__row-action-sharing-status):not(table th button):not(li.vue-crumb a),
+			&.button-vue--vue-tertiary:not(.files-list__row-action-sharing-status):not(table th button):not(li.vue-crumb a):not([aria-label="Cancel"]),
 			&[class*="files-list__row-actions-"] {
 				background-color: var(--ion-color-blue-b1);
 				border: none;
@@ -134,19 +134,41 @@
 					color: var(--ion-color-cool-grey-c2);
 				}
 
-				&:hover:not(:disabled) {
+				&:hover:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b4);
 					border-color: var(--ion-color-blue-b4);
 				}
 
-				&:active:not(:disabled) {
+				&:active:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b5);
 					border-color: var(--ion-color-blue-b5);
 				}
 			}
 
-			&.button-vue--vue-secondary {
-				color: var(--ion-color-blue-b7);
+			&.button-vue--vue-secondary, &.button-vue--vue-tertiary[aria-label="Cancel"] {
+				background-color: var(--ion-color-main-background);
+				border: 2px solid var(--ion-color-blue-b7);
+
+				.button-vue__text {
+					color: var(--ion-color-blue-b7);
+				}
+
+				&:hover:not(:disabled):not(.button-vue--disabled) {
+					background-color: var(--ion-color-blue-b7);
+					border-color: var(--ion-color-blue-b7);
+
+					.button-vue__text {
+						color: var(--ion-color-main-background);
+					}
+				}
+
+				&:active:not(:disabled):not(.button-vue--disabled) {
+					background-color: var(--ion-color-secondary);
+
+					.button-vue__text {
+						color: var(--ion-color-main-background);
+					}
+				}
 			}
 
 			/* mobile and tablet */
@@ -172,7 +194,7 @@
 					}
 				}
 
-				&:hover:not(:disabled) {
+				&:hover:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-blue-b4);
 
 					.button-vue__icon span[role=img]>svg {
@@ -180,7 +202,7 @@
 					}
 				}
 
-				&:active:not(:disabled) {
+				&:active:not(:disabled):not(.button-vue--disabled) {
 					background-color: var(--ion-color-primary);
 
 					.button-vue__icon span[role=img]>svg {
