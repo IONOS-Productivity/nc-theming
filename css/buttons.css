@@ -194,7 +194,7 @@
 					}
 				}
 
-				&:hover:not(:disabled):not(.button-vue--disabled) {
+				&:hover:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close) {
 					background-color: var(--ion-color-blue-b4);
 
 					.button-vue__icon span[role=img]>svg {
@@ -202,7 +202,7 @@
 					}
 				}
 
-				&:active:not(:disabled):not(.button-vue--disabled) {
+				&:active:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close) {
 					background-color: var(--ion-color-primary);
 
 					.button-vue__icon span[role=img]>svg {
