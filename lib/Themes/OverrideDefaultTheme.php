@@ -136,6 +136,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$colorInfo = $ionColorSkyS3;
 
 		$variables = [
+			'--color-primary-element' => '#ff8800',
 			'--color-main-background' => $colorMainBackground,
 			'--color-main-background-rgb' => $colorMainBackgroundRGB,
 			'--color-main-background-translucent' => 'rgba(var(--color-main-background-rgb), .97)',
