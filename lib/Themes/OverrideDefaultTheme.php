@@ -129,6 +129,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$colorMainBackgroundRGB = join(',', $this->util->hexToRGB($colorMainBackground));
 		$colorBoxShadow = $this->util->darken($colorMainBackground, 70);
 		$colorBoxShadowRGB = join(',', $this->util->hexToRGB($colorBoxShadow));
+		$colorPrimary = $ionColorPrimary;
 
 		$colorError = $ionColorRoseR3;
 		$colorWarning = $ionColorAmberY3;
@@ -140,6 +141,8 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--color-main-background-rgb' => $colorMainBackgroundRGB,
 			'--color-main-background-translucent' => 'rgba(var(--color-main-background-rgb), .97)',
 			'--color-main-background-blur' => 'rgba(var(--color-main-background-rgb), .8)',
+			'--color-primary' => $colorPrimary,
+			'--color-primary-element' => $colorPrimary,
 
 			// to use like this: background-image: linear-gradient(0, var('--gradient-main-background));
 			'--gradient-main-background' => 'var(--color-main-background) 0%, var(--color-main-background-translucent) 85%, transparent 100%',
