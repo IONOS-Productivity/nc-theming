@@ -300,4 +300,17 @@
 		height: 16px;
 		width: 16px;
 	}
+
+	div.modal-mask .modal-header {
+		.modal-header__name {
+			color: var(--background-image-color-text);
+		}
+		div.icons-menu {
+			button, .header-actions {
+				span[role=img]>svg {
+					color: var(--background-image-color-text);
+				}
+			}
+		}
+	}
 }
