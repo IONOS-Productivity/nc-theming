@@ -57,6 +57,7 @@
 			margin: 6px;
 			background-color: transparent;
 			span[role=img]>svg {
+				height: 16px;
 				color: var(--ion-color-secondary);
 			}
 			&:hover {
