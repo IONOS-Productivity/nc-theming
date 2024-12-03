@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SPDX-FileLicenseText: 2023 T-Systems International
  * SPDX-FileLicenseText: 2024 STRATO AG
