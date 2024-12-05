@@ -57,10 +57,6 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		return 'The default NC appearance.';
 	}
 
-	public function getMediaQuery(): string {
-		return '(prefers-color-scheme: light)';
-	}
-
 	public function getMeta(): array {
 		// https://html.spec.whatwg.org/multipage/semantics.html#meta-color-scheme
 		return [[
@@ -82,12 +78,15 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionColorBlueB4 = '#1474c4';
 		$ionColorBlueB5 = '#095BB1';
 		$ionColorBlueB7 = '#0B2A63';
+		$ionColorBlueB9 = '#02102B';
 		$ionColorCoolGreyC1 = '#f4f7fa';
 		$ionColorCoolGreyC2 = '#dbe2e8';
 		$ionColorCoolGreyC3 = '#bcc8d4';
 		$ionColorCoolGreyC4 = '#97A3B4';
 		$ionColorCoolGreyC5 = '#718095';
 		$ionColorCoolGreyC6 = '#465A75';
+		$ionColorCoolGreyC7 = '#2E4360';
+		$ionColorCoolGreyC8 = '#0F1A2A';
 		$ionColorTypoMild = '#2e4360';
 		$ionColorLightGrey = '#d7d7d7';
 
@@ -105,18 +104,24 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--ion-color-blue-b4' => $ionColorBlueB4,
 			'--ion-color-blue-b5' => $ionColorBlueB5,
 			'--ion-color-blue-b7' => $ionColorBlueB7,
+			'--ion-color-blue-b9' => $ionColorBlueB9,
 			'--ion-color-cool-grey-c1' => $ionColorCoolGreyC1,
 			'--ion-color-cool-grey-c2' => $ionColorCoolGreyC2,
 			'--ion-color-cool-grey-c3' => $ionColorCoolGreyC3,
 			'--ion-color-cool-grey-c4' => $ionColorCoolGreyC4,
 			'--ion-color-cool-grey-c5' => $ionColorCoolGreyC5,
 			'--ion-color-cool-grey-c6' => $ionColorCoolGreyC6,
+			'--ion-color-cool-grey-c7' => $ionColorCoolGreyC7,
+			'--ion-color-cool-grey-c8' => $ionColorCoolGreyC8,
 			'--ion-color-typo-mild' => $ionColorTypoMild,
 			'--ion-color-light-grey' => $ionColorLightGrey,
 			'--ion-color-green-g3' => $ionColorGreenG3,
 			'--ion-color-rose-r3' => $ionColorRoseR3,
 			'--ion-color-sky-s3' => $ionColorSkyS3,
 			'--ion-color-amber-y3' => $ionColorAmberY3,
+
+			'--ion-color-surface-c8' => 'var(--ion-color-cool-grey-c8)',
+			'--ion-color-surface-b9' => 'var(--ion-color-blue-b9)',
 		];
 
 		// COLOR MAPPING
