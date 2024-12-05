@@ -69,3 +69,70 @@
 		}
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+	#body-user {
+		div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
+			background-color: var(--ion-color-surface-c8);
+			.app-navigation-entry {
+				&.active {
+					background-color: #2E4360 !important;
+					.app-navigation-entry-link {
+						color: var(--ion-color-cool-grey-c1) !important;
+					}
+				}
+				&:hover {
+					background-color: #465A75;
+				}
+	
+				/* fix Storage Quota color after click */
+				&:focus-within:not(:active) { 
+					background-color: var(--ion-color-surface-c8);
+				}
+
+				.app-navigation-entry-link {
+					color: var(--ion-color-cool-grey-c1);
+				}
+			}
+	
+			.app-navigation-entry--opened:has(.app-navigation-entry__children) {
+				background: var(--ion-color-surface-b9);
+				.app-navigation-entry__children {
+					.app-navigation-entry-wrapper {
+						background: var(--ion-color-surface-b9);
+					}
+				}
+			}
+
+			/* Navigation Toggle Button */
+			div.app-navigation-toggle-wrapper button {
+				background-color: #718095;
+				span[role=img]>svg {
+					color: #F4F7FA;
+				}
+				&:hover {
+					background-color: var(--ion-color-cool-grey-c3);
+					span[role=img]>svg {
+						color: var(--ion-color-secondary);
+					}
+				}
+			}
+
+			/* Sub Navigation Toggle Icon Button */
+			.button-vue--icon-only:not(.app-navigation-toggle) {
+				margin: 6px;
+				background-color: transparent;
+				span[role=img]>svg {
+					height: 16px;
+					color: var(--ion-color-cool-grey-c1);
+				}
+				&:hover {
+					background-color: transparent;
+					span[role=img]>svg {
+						color: var(--ion-color-cool-grey-c1);
+					}
+				}
+			}
+		}
+	}
+}
