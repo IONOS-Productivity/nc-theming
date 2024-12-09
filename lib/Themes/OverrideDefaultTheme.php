@@ -76,12 +76,13 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		// IONOS COLORS
 		$ionColorMainBackground = '#fff';
 		$ionColorPrimary = '#003d8f';
-		$ionColorSecondary = '#001b41';
 		$ionColorBlueB1 = '#dbedf8';
 		$ionColorBlueB2 = '#95caeb';
 		$ionColorBlueB4 = '#1474c4';
 		$ionColorBlueB5 = '#095BB1';
+		$ionColorBlueB6 = '#003D8F';
 		$ionColorBlueB7 = '#0B2A63';
+		$ionColorBlueB8 = '#001B41';
 		$ionColorCoolGreyC1 = '#f4f7fa';
 		$ionColorCoolGreyC2 = '#dbe2e8';
 		$ionColorCoolGreyC3 = '#bcc8d4';
@@ -101,12 +102,14 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionosVariables = [
 			'--ion-color-main-background' => $ionColorMainBackground,
 			'--ion-color-primary' => $ionColorPrimary,
-			'--ion-color-secondary' => $ionColorSecondary,
+			'--ion-color-secondary' => $ionColorBlueB8,
 			'--ion-color-blue-b1' => $ionColorBlueB1,
 			'--ion-color-blue-b2' => $ionColorBlueB2,
 			'--ion-color-blue-b4' => $ionColorBlueB4,
 			'--ion-color-blue-b5' => $ionColorBlueB5,
+			'--ion-color-blue-b6' => $ionColorBlueB6,
 			'--ion-color-blue-b7' => $ionColorBlueB7,
+			'--ion-color-blue-b8' => $ionColorBlueB8,
 			'--ion-color-cool-grey-c1' => $ionColorCoolGreyC1,
 			'--ion-color-cool-grey-c2' => $ionColorCoolGreyC2,
 			'--ion-color-cool-grey-c3' => $ionColorCoolGreyC3,
