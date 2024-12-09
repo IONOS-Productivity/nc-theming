@@ -1,3 +1,21 @@
+:root {
+	--ion-breadcrumb-text: var(--ion-color-secondary);
+	--ion-breadcrumb-text-hover: var(--ion-color-blue-b4);
+	--ion-breadcrumb-text-active: var(--ion-color-blue-b5);
+	--ion-breadcrumb-text-disabled: var(--ion-color-cool-grey-c4);
+
+	--ion-files-list-background-hover: var(--ion-color-blue-b1);
+	--ion-files-list-icon: var(--ion-color-blue-b4);
+
+	--ion-context-menu-background: var(--color-main-background);
+	--ion-context-menu-border: var(--ion-color-blue-b4);
+	--ion-context-menu-item-background-hover: var(--ion-color-blue-b1);
+	--ion-context-menu-item-background-active: var(--ion-color-blue-b2);
+	--ion-context-menu-item-background-disabled: var(--ion-context-menu-background);
+	--ion-context-menu-item-text: var(--ion-color-secondary);
+	--ion-context-menu-item-text-disabled: var(--ion-color-cool-grey-c4);
+}
+
 #body-user {
 	.files-list__filters {
 		display: none;
@@ -11,39 +29,39 @@
 				a, a:hover, a:active, a:disabled, button {
 					padding: 2px 0;
 					font-weight: 400;
-					color: var(--ion-color-secondary);
+					color: var(--ion-breadcrumb-text-default);
 					background-color: var(--color-main-background);
 
 					span.button-vue__text {
-						color: var(--ion-color-secondary);
+						color: var(--ion-breadcrumb-text-default);
 						font-weight: 400;
 						&:hover {
-							color: var(--ion-color-blue-b4);
+							color: var(--ion-breadcrumb-text-hover);
 						}
 						&:active {
-							color: var(--ion-color-blue-b5);
+							color: var(--ion-breadcrumb-text-active);
 						}
 						&:disabled {
-							color: var(--ion-color-cool-grey-c4)
+							color: var(--ion-breadcrumb-text-disabled);
 						}
 					}
 				}
 
 				/* ensure the icon-only buttons look correct */
 				button.button-vue--icon-only, a.button-vue--icon-only svg {
-					background-color: var(--color-main-background);
-					color: var(--ion-color-secondary);
+					background-color: transparent;
+					color: var(--ion-breadcrumb-text);
 					padding: 2px 0;
 					&:hover {
-						color: var(--ion-color-blue-b4);
+						color: var(--ion-breadcrumb-text-hover);
 						background-color: inherit;
 					}
 					&:active {
-						color: var(--ion-color-blue-b5);
+						color: var(--ion-breadcrumb-text-active);
 						background-color: inherit;
 					}
 					&:disabled {
-						color: var(--ion-color-cool-grey-c4);
+						color: var(--ion-breadcrumb-text-disabled);
 						background-color: inherit;
 					}
 					&:focus {
@@ -59,7 +77,7 @@
 				}
 
 				.vue-crumb__separator {
-					color: var(--ion-color-secondary);
+					color: var(--ion-breadcrumb-text);
 				}
 			}
 		}
@@ -67,24 +85,21 @@
 
 	div[data-cy-files-list].files-list {
 		.files-list__row {
-			&:hover {
-				background-color: var(--ion-color-blue-b1);
-			}
-			&.active {
-				background-color: var(--ion-color-blue-b1);
+			&:hover ,&.active {
+				background-color: var(--ion-files-list-background-hover);
 			}
 			.files-list__row-icon {
-				color: var(--ion-color-blue-b4);
+				color: var(--ion-files-list-icon);
 			}
 			.files-list__row-actions {
 				.action-items {
-					color: var(--ion-color-blue-b4);
+					color: var(--ion-files-list-icon);
 				}	
 				.icon-vue {
-					color: var(--ion-color-blue-b4);
+					color: var(--ion-files-list-icon);
 				}
 				.material-design-icon{
-					color: var(--ion-color-blue-b4);
+					color: var(--ion-files-list-icon);
 				}
 			}
 		}
@@ -96,39 +111,40 @@
 			}
 		}
 	}
-
+	
+	/* Context Menu */
 	div.v-popper--theme-dropdown.v-popper__popper:has(.v-popper__wrapper) {
 		border-radius: 16px;
 		filter: none;
 	
 		div.v-popper__wrapper {
 			border-radius: inherit;
-			border: 1px solid var(--ion-color-blue-b4);
+			border: 1px solid var(--ion-context-menu-border);
 	
 			div.v-popper__inner {
 				padding: 2px 12px;
-				background-color: var(--color-main-background);
+				background-color: var(--ion-context-menu-background);
 	
 				li.action:has(button.action-button) {
 					&.active {
-						background-color: var(--ion-color-blue-b1);
+						background-color: var(--ion-context-menu-item-background-hover);
 					}
 	
 					button.action-button {
 						border-radius: 8px;
-						color: var(--ion-color-secondary);
+						color: var(--ion-context-menu-item-text);
 						font-style: normal;
 						font-weight: 600;
 						margin-top: 12px;
 						margin-bottom: 12px;
 
 						&:active {
-							background-color: var(--ion-color-blue-b2);
+							background-color: var(--ion-context-menu-item-background-active);
 						}
 
 						&:disabled {
-							color: var(--ion-color-cool-grey-c4);
-							background-color: var(--color-main-background);
+							color: var(--ion-context-menu-item-text-disabled);
+							background-color: var(--ion-context-menu-item-background-disabled);
 							cursor: not-allowed;
 						}
 					}
