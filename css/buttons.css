@@ -1,3 +1,34 @@
+:root {
+	--ion-button-primary-background-default: var(--ion-color-blue-b7);
+	--ion-button-primary-background-hover: var(--ion-color-blue-b4);
+	--ion-button-primary-background-active: var(--ion-color-blue-b5);
+	--ion-button-primary-background-disabled: var(--ion-color-cool-grey-c4);
+	--ion-button-primary-text: #fff;
+	--ion-button-primary-text-disabled: var(--ion-color-cool-grey-c2);
+
+	--ion-button-secondary-background-default: transparent;
+	--ion-button-secondary-background-hover: var(--ion-color-blue-b7);
+	--ion-button-secondary-background-active: var(--ion-color-secondary);
+	--ion-button-secondary-background-disabled: transparent;
+	--ion-button-secondary-border-default: 2px solid var(--ion-color-blue-b7);
+	--ion-button-secondary-border-disabled: 2px solid var(--ion-color-cool-grey-c4);
+	--ion-button-secondary-text: var(--ion-color-blue-b7);
+	--ion-button-secondary-text-hover: #fff;
+	--ion-button-secondary-text-active: #fff;
+	--ion-button-secondary-text-disabled: var(--ion-color-cool-grey-c4);
+
+	--ion-button-tertiary-background-default: var(--ion-color-blue-b1);
+	--ion-button-tertiary-background-hover: var(--ion-color-cool-grey-c2);
+	--ion-button-tertiary-background-active: var(--ion-color-cool-grey-c3);
+	--ion-button-tertiary-text: var(--ion-color-secondary);
+
+	--ion-button--icon-only-background: transparent;
+	--ion-button--icon-only-text: var(--ion-color-blue-b4);
+	--ion-button--icon-only-background-hover: var(--ion-color-blue-b4);
+	--ion-button--icon-only-background-active: var(--ion-color-blue-b6);
+	--ion-button--icon-only-text-hover: #fff;
+}
+
 #body-user {
 	.button-vue {
 		border-radius: 30px;
@@ -25,32 +56,32 @@
 
 			&.button-vue--vue-primary[aria-label*="Copy"],
 			&.button-vue--vue-secondary, &.button-vue--vue-tertiary[aria-label="Cancel"] {
-				background-color: var(--ion-color-main-background);
-				border: 2px solid var(--ion-color-blue-b7);
+				background-color: var(--ion-button-secondary-background-default);
+				border: var(--ion-button-secondary-border-default);
 
 				&:not(.action-item__menutoggle) {
 					.button-vue__text, .button-vue__icon svg {
-						color: var(--ion-color-blue-b7);
+						color: var(--ion-button-secondary-text);
 					}
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b7);
-					border-color: var(--ion-color-blue-b7);
+					background-color: var(--ion-button-secondary-background-hover);
+					border-color: var(--ion-button-secondary-background-hover);
 
 					&:not(.action-item--single) {
 						.button-vue__text, .button-vue__icon svg {
-							color: var(--ion-color-main-background);
+							color: var(--ion-button-secondary-text-hover);
 						}
 					}
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-secondary);
+					background-color: var(--ion-button-secondary-background-active);
 
 					&:not(.action-item--single) {
 						.button-vue__text, .button-vue__icon svg {
-							color: var(--ion-color-main-background);
+							color: var(--ion-button-secondary-text-active);
 						}
 					}
 				}
@@ -59,44 +90,44 @@
 			&.button-vue--vue-primary, &.button-vue--vue-error,
 				/* ensure primary type styling of "new" button */
 			&.action-item__menutoggle, &.files-list__header-upload-button--disabled {
-				background-color: var(--ion-color-blue-b7);
+				background-color: var(--ion-button-primary-background-default);
 				border: none;
 
 				.button-vue__text, .button-vue__icon svg {
-					color: var(--ion-color-main-background);
+					color: var(--ion-button-primary-text);
 				}
 
 				&:disabled {
-					background-color: var(--ion-color-cool-grey-c4);
-					color: var(--ion-color-cool-grey-c2);
+					background-color: var(--ion-button-primary-background-disabled);
+					color: var(--ion-button-primary-text-disabled);
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b4);
-					border-color: var(--ion-color-blue-b4);
+					background-color: var(--ion-button-primary-background-hover);
+					border-color: var(--ion-button-primary-background-hover);
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b5);
-					border-color: var(--ion-color-blue-b5);
+					background-color: var(--ion-button-primary-background-active);
+					border-color: var(--ion-button-primary-background-active);
 				}
 			}
 
 			&.button-vue--vue-tertiary:not(.files-list__row-action-sharing-status):not(table th button):not(li.vue-crumb a):not([aria-label="Cancel"]),
 			&[class*="files-list__row-actions-"] {
-				background-color: var(--ion-color-blue-b1);
+				background-color: var(--ion-button-tertiary-background-default);
 				border: none;
 
 				.button-vue__text, .button-vue__icon svg {
-					color: var(--ion-color-secondary);
+					color: var(--ion-button-tertiary-text);
 				}
 
 				&:hover {
-					background-color: var(--ion-color-cool-grey-c2);
+					background-color: var(--ion-button-tertiary-background-hover);
 				}
 
 				&:active {
-					background-color: var(--ion-color-cool-grey-c3);
+					background-color: var(--ion-button-tertiary-background-active);
 				}
 			}
 
@@ -126,47 +157,47 @@
 
 		&.button-vue--text-only {
 			&.button-vue--vue-primary, &.button-vue--vue-error {
-				background-color: var(--ion-color-blue-b7);
-				color: var(--ion-color-main-background);
+				background-color: var(--ion-button-primary-background-default);
+				color: var(--ion-button-primary-text);
 
 				&:disabled {
-					background-color: var(--ion-color-cool-grey-c4);
-					color: var(--ion-color-cool-grey-c2);
+					background-color: var(--ion-button-primary-background-disabled);
+					color: var(--ion-button-primary-text-disabled);
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b4);
-					border-color: var(--ion-color-blue-b4);
+					background-color: var(--ion-button-primary-background-hover);
+					border-color: var(--ion-button-primary-background-hover);
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b5);
-					border-color: var(--ion-color-blue-b5);
+					background-color: var(--ion-button-primary-background-active);
+					border-color: var(--ion-button-primary-background-active);
 				}
 			}
 
 			&.button-vue--vue-secondary, &.button-vue--vue-tertiary[aria-label="Cancel"] {
-				background-color: var(--ion-color-main-background);
-				border: 2px solid var(--ion-color-blue-b7);
+				background-color: var(--ion-button-secondary-background-default);
+				border: var(--ion-button-secondary-border-default);
 
 				.button-vue__text {
-					color: var(--ion-color-blue-b7);
+					color: var(--ion-button-secondary-text);
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-blue-b7);
-					border-color: var(--ion-color-blue-b7);
+					background-color: var(--ion-button-secondary-background-hover);
+					border-color: var(--ion-button-secondary-background-hover);
 
 					.button-vue__text {
-						color: var(--ion-color-main-background);
+						color: var(--ion-button-secondary-text-hover);
 					}
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-color-secondary);
+					background-color: var(--ion-button-secondary-background-active);
 
 					.button-vue__text {
-						color: var(--ion-color-main-background);
+						color: var(--ion-button-secondary-text-active);
 					}
 				}
 			}
@@ -185,28 +216,28 @@
 			min-height: 32px;
 			&.button-vue--vue-tertiary {
 				.button-vue__icon span[role=img]>svg {
-					color: var(--ion-color-blue-b4);
+					color: var(--ion-button--icon-only-text)
 				}
 
 				&[class^="files-list__header-"], &.app-navigation-toggle {
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-color-blue-b7);
+						color: var(--ion-button-tertiary-text);
 					}
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse) {
-					background-color: var(--ion-color-blue-b4);
+					background-color: var(--ion-button--icon-only-background-hover);
 
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-color-main-background);
+						color: var(--ion-button--icon-only-text-hover);
 					}
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse) {
-					background-color: var(--ion-color-primary);
+					background-color: var(--ion-button--icon-only-background-active);
 
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-color-main-background);
+						color: var(--ion-button--icon-only-text-hover);
 					}
 				}
 
