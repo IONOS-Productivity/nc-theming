@@ -27,6 +27,15 @@
 	--ion-button--icon-only-background-hover: var(--ion-color-blue-b4);
 	--ion-button--icon-only-background-active: var(--ion-color-blue-b6);
 	--ion-button--icon-only-text-hover: #fff;
+
+	--ion-button-sidebar-background: transparent;
+	--ion-button-sidebar-background-hover: var(--ion-color-cool-grey-c2);
+	--ion-button-sidebar-background-active: var(--ion-color-cool-grey-c3);
+	--ion-button-sidebar-text: var(--ion-color-secondary);
+
+	--ion-button-sidebar--icon-only-background: var(--ion-color-cool-grey-c2);
+	--ion-button-sidebar--icon-only-background-hover: var(--ion-color-cool-grey-c3);
+	--ion-button-sidebar--icon-only-text: var(--ion-color-secondary);
 }
 
 #body-user {
