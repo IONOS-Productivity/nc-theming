@@ -1,9 +1,14 @@
+:root {
+	--ion-surface-primary: var(--ion-color-main-background);
+	--ion-surface-secondary:  var(--ion-color-cool-grey-c1);
+}
+
 #body-user {
 	.app-navigation__search {
 		display: none;
 	}
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
-		background-color: var(--ion-color-cool-grey-c1);
+		background-color: var(--ion-surface-secondary);
 		.app-navigation-entry {
 			font-weight: 600;
 			span[role=img]>svg {
@@ -12,23 +17,23 @@
 			}
 			border-radius: var(--border-radius-pill);
 			&.active {
-				background-color: var(--ion-color-cool-grey-c3) !important;
+				background-color: var(--ion-button-sidebar-background-active) !important;
 				.app-navigation-entry-link {
-					color: var(--ion-color-secondary) !important;
+					color: var(--ion-button-sidebar-text) !important;
 				}
 			}
 			&:hover {
-				background-color: var(--ion-color-cool-grey-c2);
+				background-color: var(--ion-button-sidebar-background-hover);
 			}
 
 			/* fix Storage Quota color after click */
 			&:focus-within:not(:active) { 
-				background-color: var(--ion-color-cool-grey-c1);
+				background-color: var(--ion-surface-secondary);
 			}
 		}
 
 		.app-navigation-entry--opened:has(.app-navigation-entry__children) {
-			background: var(--ion-color-main-background);
+			background: var(--ion-surface-primary);
 			border-radius: 8px;
 			.app-navigation-entry__children {
 				padding: 0 8px;
@@ -37,7 +42,7 @@
 					border-radius: 4px;
 				}
 				.app-navigation-entry-wrapper {
-					background: var(--ion-color-main-background);
+					background: var(--ion-surface-primary);
 					border-radius: 8px;
 					min-height: 40px;
 					margin: 4px 0;
@@ -48,14 +53,14 @@
 		/* Navigation Toggle Button */
 		div.app-navigation-toggle-wrapper button {
 			margin: 6px 0;
-			background-color: var(--ion-color-cool-grey-c2);
+			background-color: var(--ion-button-sidebar-background);
 			span[role=img]>svg {
-				color: var(--ion-color-secondary);
+				color: var(--ion-button-sidebar--icon-only-text);
 			}
 			&:hover {
-				background-color: var(--ion-color-cool-grey-c3);
+				background-color: var(--ion-button-sidebar--icon-only-background-hover);
 				span[role=img]>svg {
-					color: var(--ion-color-secondary);
+					color: var(--ion-button-sidebar--icon-only-text);
 				}
 			}
 		}
@@ -67,12 +72,12 @@
 			span[role=img]>svg {
 				height: 24px;
 				width: 24px;
-				color: var(--ion-color-secondary);
+				color: var(--ion-button-sidebar-text);
 			}
 			&:hover {
 				background-color: transparent;
 				span[role=img]>svg {
-					color: var(--ion-color-secondary);
+					color: var(--ion-button-sidebar-text);
 				}
 			}
 		}
