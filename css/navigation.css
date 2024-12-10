@@ -2,6 +2,10 @@
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 		background-color: var(--ion-color-cool-grey-c1);
 		.app-navigation-entry {
+			span[role=img]>svg {
+				height: 16px;
+				width: auto;
+			}
 			border-radius: var(--border-radius-pill);
 			&.active {
 				background-color: var(--ion-color-cool-grey-c3) !important;
