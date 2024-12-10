@@ -2,6 +2,7 @@
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 		background-color: var(--ion-color-cool-grey-c1);
 		.app-navigation-entry {
+			font-weight: 600;
 			span[role=img]>svg {
 				height: 16px;
 				width: auto;
