@@ -297,8 +297,8 @@
 
 	/* drop down chevron-up and down icon */
 	.vs__open-indicator-button svg{
-		height: 16px;
-		width: 16px;
+		height: 24px;
+		width: 24px;
 	}
 
 	div.modal-mask .modal-header {
