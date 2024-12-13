@@ -1,4 +1,10 @@
 #body-user {
+	.files-list__filters {
+		display: none;
+	}
+	.files-list__thead, .files-list__thead-overlay {
+		top: 0;
+	}
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
