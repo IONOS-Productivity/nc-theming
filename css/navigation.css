@@ -1,4 +1,7 @@
 #body-user {
+	.app-navigation__search {
+		display: none;
+	}
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 		background-color: var(--ion-color-cool-grey-c1);
 		.app-navigation-entry {
