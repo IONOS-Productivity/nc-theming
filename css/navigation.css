@@ -57,7 +57,7 @@
 
 		/* Navigation Toggle Button */
 		div.app-navigation-toggle-wrapper button {
-			margin: 6px 0;
+			margin: 18px 0;
 			background-color: var(--ion-button-sidebar-background);
 			span[role=img]>svg {
 				color: var(--ion-button-sidebar--icon-only-text);
