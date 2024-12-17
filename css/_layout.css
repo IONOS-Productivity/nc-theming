@@ -1,0 +1,9 @@
+#body-user {
+	--list-row-height: 55px;
+}
+
+#content-vue {
+	margin: 0;
+	width: 100%;
+	border-radius: 0;
+}

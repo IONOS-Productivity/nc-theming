@@ -5,6 +5,43 @@
 	.files-list__thead, .files-list__thead-overlay {
 		top: 0;
 	}
+
+	.files-list__header {
+		margin-top: 20px;
+		margin-right: 16px;
+		margin-bottom: 14px;
+	}
+
+	thead.files-list__thead tr,
+	tbody.files-list__tbody.files-list__tbody--list tr,
+	tfoot.files-list__tfoot tr {
+		padding-right: 44px;
+		padding-left: 4px;
+	}
+
+	.files-list__header-grid-button {
+		position: absolute;
+		top: 88px;
+		right: 20px;
+		z-index: 33;
+	}
+
+	.files-list__refresh-icon {
+		position: absolute;
+		right: 50%;
+	}
+
+	.breadcrumb nav {
+		flex-grow: 1;
+	}
+
+	.files-list__column-sort-button-icon {
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
