@@ -7,6 +7,11 @@
 	.app-navigation__search {
 		display: none;
 	}
+
+	.app-navigation-list {
+		padding: 20px;
+	}
+
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
 		background-color: var(--ion-surface-secondary);
 		.app-navigation-entry {
