@@ -230,6 +230,9 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--background-invert-if-bright' => 'invert(100%)',
 			'--background-image-invert-if-bright' => 'no',
 			'--background-image-color-text' => '#ffffff',
+
+			'--content-padding-top' => '15px',
+			'--content-padding-right' => '40px',
 		];
 
 		return array_merge(

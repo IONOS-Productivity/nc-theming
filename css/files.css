@@ -5,6 +5,18 @@
 	.files-list__thead, .files-list__thead-overlay {
 		top: 0;
 	}
+
+	.files-list__header-grid-button {
+		top: calc(var(--content-padding-top) + var(--header-menu-item-height));
+		right: var(--content-padding-right);
+		z-index: 11;
+	}
+
+	thead.files-list__thead,
+	tbody.files-list__tbody tr,
+	tfoot.files-list__tfoot {
+		padding-right: var(--content-padding-right);
+	}
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
