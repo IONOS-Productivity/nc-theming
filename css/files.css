@@ -34,6 +34,21 @@
 	.files-list__tbody--list {
 		min-height: auto !important;
 	}
+
+	.files-list__column-sort-button-icon {
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	.checkbox-radio-switch {
+		span[role=img]>svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
