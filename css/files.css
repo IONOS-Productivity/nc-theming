@@ -25,6 +25,11 @@
 	tfoot.files-list__tfoot {
 		padding-right: var(--content-padding-right);
 	}
+
+	.files-list__refresh-icon {
+		position: absolute;
+		right: 50%;
+	}
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
