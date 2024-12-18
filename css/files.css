@@ -12,6 +12,14 @@
 		z-index: 11;
 	}
 
+	.breadcrumb nav {
+		flex-grow: 1;
+	}
+
+	.files-list__header {
+		margin-right: -18px;
+	}
+
 	thead.files-list__thead,
 	tbody.files-list__tbody tr,
 	tfoot.files-list__tfoot {

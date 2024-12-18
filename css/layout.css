@@ -7,4 +7,5 @@
 main#app-content-vue,
 .app-navigation-toggle-wrapper {
 	padding-top: var(--content-padding-top);
+	overflow-x: hidden;
 }
