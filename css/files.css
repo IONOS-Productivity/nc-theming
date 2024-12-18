@@ -113,6 +113,10 @@
 		height: var(--list-row-height);
 	}
 
+	.files-list__tbody--grid .files-list__row-name {
+		transform: scale(0.7);
+	}
+
 	div[data-cy-files-list].files-list {
 		.files-list__row {
 			&:hover {
