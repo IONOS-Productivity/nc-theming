@@ -30,6 +30,10 @@
 		position: absolute;
 		right: 50%;
 	}
+
+	.files-list__tbody--list {
+		min-height: auto !important;
+	}
 	div.files-list__header:has(div.files-list__breadcrumbs), .file-picker {
 		div.files-list__breadcrumbs, .file-picker__breadcrumbs {
 			ul.breadcrumb__crumbs {
@@ -88,6 +92,10 @@
 				}
 			}
 		}
+	}
+
+	.files-list__tbody--list .files-list__row {
+		height: var(--list-row-height);
 	}
 
 	div[data-cy-files-list].files-list {

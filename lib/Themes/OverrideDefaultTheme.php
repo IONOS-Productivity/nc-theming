@@ -231,6 +231,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--background-image-invert-if-bright' => 'no',
 			'--background-image-color-text' => '#ffffff',
 
+			'--list-row-height' => '48px',
 			'--content-padding-top' => '15px',
 			'--content-padding-right' => '40px',
 		];
