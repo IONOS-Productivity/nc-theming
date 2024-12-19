@@ -119,7 +119,7 @@
 			}
 
 			/* mobile and tablet */
-			@media only screen and (max-width: 1199px) {
+			@media only screen and (max-width: 1023px) {
 				min-height: 48px;
 			}
 		}
@@ -172,7 +172,7 @@
 			}
 
 			/* mobile and tablet */
-			@media only screen and (max-width: 1199px) {
+			@media only screen and (max-width: 1023px) {
 				min-height: 48px;
 			}
 		}
@@ -194,7 +194,7 @@
 					}
 				}
 
-				&:hover:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse) {
+				&:hover:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse):not(.files-list__header-grid-button) {
 					background-color: var(--ion-color-blue-b4);
 
 					.button-vue__icon span[role=img]>svg {
@@ -202,7 +202,7 @@
 					}
 				}
 
-				&:active:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse) {
+				&:active:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse):not(.files-list__header-grid-button) {
 					background-color: var(--ion-color-primary);
 
 					.button-vue__icon span[role=img]>svg {
@@ -210,6 +210,18 @@
 					}
 				}
 
+				&.files-list__header-grid-button {
+					&:hover {
+						.button-vue__icon span[role=img]>svg {
+							color: var(--ion-color-blue-b5);
+						}
+					}
+					&:active {
+						.button-vue__icon span[role=img]>svg {
+							color: var(--ion-color-typo-mild);
+						}
+					}
+				}
 				&.modal-container__close {
 					margin: 4px;
 					.button-vue__icon span[role=img]>svg {
