@@ -1,5 +1,11 @@
 #body-user {
-	--list-row-height: 55px;
+	div.files-list {
+		--row-height: 55px;
+
+		@media only screen and (max-width: 1023px) {
+			--row-height: 65px;
+		}
+	}
 }
 
 #content-vue {
