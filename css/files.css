@@ -4,12 +4,20 @@
 	}
 	.files-list__thead, .files-list__thead-overlay {
 		top: 0;
+		.files-list__row-head .files-list__column--sortable .button-vue__text {
+			@media only screen and (max-width: 1023px) {
+				font-size: 16px;
+			}
+		}
 	}
 
 	.files-list__header {
 		margin-top: 20px;
 		margin-right: 16px;
 		margin-bottom: 14px;
+		@media only screen and (max-width: 1023px) {
+			margin-top: 15px;
+		}
 	}
 
 	thead.files-list__thead tr,
