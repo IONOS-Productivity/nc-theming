@@ -59,6 +59,9 @@
 		div.app-navigation-toggle-wrapper button {
 			margin: 18px 0;
 			background-color: var(--ion-button-sidebar-background);
+			@media only screen and (max-width: 1023px) {
+				margin: 12px 0;
+			}
 			span[role=img]>svg {
 				color: var(--ion-button-sidebar--icon-only-text);
 			}
