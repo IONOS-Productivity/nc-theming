@@ -339,6 +339,10 @@
 					}
 				}
 			}
+
+			&.files-list__row-size span.button-vue__wrapper {
+				flex-direction: row-reverse;
+			}
 		}
 	}
 
