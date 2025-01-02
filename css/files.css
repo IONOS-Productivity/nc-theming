@@ -126,6 +126,27 @@
 				}
 			}
 		}
+
+		@media only screen and (max-width: 767px) {
+			margin-inline: 0;
+
+			div.breadcrumb {
+				flex-direction: column-reverse;
+				align-items: flex-start;
+
+				nav {
+					margin-left: 8px;
+				}
+
+				div.breadcrumb__actions {
+					align-self: flex-end;
+
+					&:has(div.v-popper) {
+						position: sticky;
+					}
+				}
+			}
+		}
 	}
 
 	div[data-cy-files-list].files-list {
