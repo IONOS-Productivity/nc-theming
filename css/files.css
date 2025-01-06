@@ -187,6 +187,10 @@
 		}
 	}
 
+	tbody.files-list__tbody--grid .files-list__row-icon {
+		transform: scale(.7);
+	}
+
 	/* Context Menu */
 	div.v-popper--theme-dropdown.v-popper__popper:has(.v-popper__wrapper) {
 		border-radius: 16px;
