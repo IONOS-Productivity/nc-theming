@@ -178,6 +178,15 @@
 		}
 	}
 	
+	tfoot.files-list__tfoot tr td.files-list__column.files-list__row-size,
+	td[data-cy-files-list-row-size].files-list__row-size {
+		justify-content: normal;
+		padding-left: 12px;
+		@media only screen and (max-width: 1199px) {
+			padding-left: 23px;
+		}
+	}
+
 	/* Context Menu */
 	div.v-popper--theme-dropdown.v-popper__popper:has(.v-popper__wrapper) {
 		border-radius: 16px;
