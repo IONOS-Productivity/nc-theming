@@ -1,0 +1,251 @@
+@media only screen and (max-width: 1024px) {
+	#body-public header #header-primary-action {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	#body-public header #header-actions-menu > ul > li#download {
+		display: none;
+	}
+}
+
+#content.app-files_sharing {
+	margin: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	box-sizing: content-box;
+
+	div#files-public-content {
+		margin-bottom: var(--footer-height);
+
+		.files-controls {
+			height: 80px;
+			padding: 22px 16px;
+
+			.actions.creatable {
+				position: absolute;
+				right: 16px;
+
+				.button.new {
+					background-color: var(--ion-button-primary-background-default);
+					color: var(--ion-button-primary-text);
+					border: none;
+					border-radius: 30px;
+					padding: 7px 16px;
+					min-height: 36px;
+					height: 36px;
+
+					&:disabled {
+						background-color: var(--ion-button-primary-background-disabled);
+						color: var(--ion-button-primary-text-disabled);
+					}
+
+					&:hover:not(:disabled):not(.button-vue--disabled) {
+						background-color: var(--ion-button-primary-background-hover);
+						border-color: var(--ion-button-primary-background-hover);
+					}
+
+					&:active:not(:disabled):not(.button-vue--disabled) {
+						background-color: var(--ion-button-primary-background-active);
+						border-color: var(--ion-button-primary-background-active);
+					}
+				}
+
+				.newFileMenu {
+					top: 50px;
+					padding: 2px 12px;
+					background-color: var(--ion-color-main-background);
+					border: 1px solid var(--ion-context-menu-border);
+					border-radius: 16px;
+					z-index: 100000;
+				}
+
+				#uploadprogresswrapper {
+					position: absolute;
+					right: 120px;
+
+					:has([style*="display:none"]) {
+						display: none;
+					}
+				}
+			}
+		}
+
+
+		#imgframe {
+			padding-bottom: 16px;
+			margin-top: 10%;
+		}
+
+		#downloadFile.button {
+			margin-top: 48px;
+			background-color: var(--ion-button-secondary-background-default);
+			border: var(--ion-button-secondary-border-default);
+			color: var(--ion-button-secondary-text);
+			border-radius: 50px;
+			font-size: 14px;
+			padding: 8px 16px;
+			min-height: 36px;
+			height: 36px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 6px;
+
+			&:hover {
+				background-color: var(--ion-button-secondary-background-hover);
+				color: var(--ion-button-secondary-text-hover);
+			}
+
+			&:active {
+				background-color: var(--ion-button-secondary-background-active);
+				border-color: var(--ion-button-secondary-background-active);
+				color: var(--ion-button-secondary-text-active)
+			}
+
+			&:disabled {
+				background-color: var(--ion-button-secondary-background-disabled);
+				color: var(--ion-button-secondary-text-disabled);
+			}
+		}
+	}
+
+	.thumbnail {
+		background-image: var(--original-icon-category-files-dark);
+	}
+
+
+	#view-toggle {
+		top: 85px;
+		right: 20px;
+		position: relative;
+		z-index: 61;
+	}
+
+	.files-filestable.list-container {
+		tr {
+			display: block;
+			padding-right: 44px;
+			border-bottom: 1px solid var(--color-border);
+		}
+	}
+}
+
+#notemenu {
+	#note-content {
+		display: none;
+	}
+
+	&:has(div[aria-expanded="true"]) {
+		#note-content {
+			border: 1px solid var(--ion-dropdown-classic);
+			box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.25);
+			width: 388px;
+			height: 108px;
+			border-radius: 16px;
+			padding: 18px 16px;
+			top: 80px;
+			right: 0;
+			position: absolute;
+			background-color: var(--ion-color-main-background);
+			color: var(--ion-text);
+
+			@media screen and (max-width: 388px) {
+				width: calc(100vw - 67px);
+				display: block;
+				margin: 0 16px;
+			}
+		}
+	}
+
+	.menutoggle {
+		@media (prefers-color-scheme: light) {
+			background-image: var(--icon-comment-dark);
+			filter: var(--ion-icon-filter-secondary);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			background-image: var(--icon-comment-light);
+		}
+	}
+}
+
+#ionos-global-nav {
+	+ div.header-info {
+		background-color: var(--ion-color-main-background);
+		font-weight: bolder;
+	}
+
+	#header-primary-action a {
+		background-color: var(--ion-button-secondary-background-default);
+		border: var(--ion-button-secondary-border-default);
+		color: var(--ion-button-secondary-text);
+		border-radius: 50px;
+		font-size: 14px;
+		padding: 8px 16px;
+
+		&:hover {
+			background-color: var(--ion-button-secondary-background-hover);
+			color: var(--ion-button-secondary-text-hover);
+		}
+
+		&:active {
+			background-color: var(--ion-button-secondary-background-active);
+			border-color: var(--ion-button-secondary-background-active);
+			color: var(--ion-button-secondary-text-active)
+		}
+
+		&:disabled {
+			background-color: var(--ion-button-secondary-background-disabled);
+			color: var(--ion-button-secondary-text-disabled);
+		}
+	}
+
+	#header-actions-toggle {
+		background-color: var(--ion-color-main-background);;
+	}
+
+	#header-actions-menu {
+		&.open.popovermenu {
+			max-width: 468px;
+			margin-right: 22px;
+			padding: 12px;
+			border-radius: 16px;
+			border: 1px solid var(--ion-dropdown-classic);
+			background-color: var(--ion-color-main-background);
+			color: var(--ion-text);
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+
+				.menuitem {
+					padding-right: 0 !important;
+				}
+
+				input#directLink {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.header-info {
+	&:not(:has(+ #content .directDownload)) {
+		display: none;
+	}
+
+	.header-title {
+		margin: 28px 0 28px 16px;
+		color: var(--ion-text);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px;
+	}
+}
