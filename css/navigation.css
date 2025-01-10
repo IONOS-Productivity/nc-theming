@@ -89,5 +89,20 @@
 				}
 			}
 		}
+
+		@media only screen and (max-width: 767px) {
+			&:has(span.menu-open-icon) {
+				width: auto;
+				max-width: inherit;
+
+				.app-navigation-list {
+					padding-right: calc(var(--default-clickable-area) + 16px);
+				}
+
+				div.app-navigation-toggle-wrapper {
+					margin-inline-end: calc(var(--default-clickable-area) - 24px);
+				}
+			}
+		}
 	}
 }
