@@ -1,21 +1,3 @@
-:root {
-	--ion-breadcrumb-text: var(--ion-color-secondary);
-	--ion-breadcrumb-text-hover: var(--ion-color-blue-b4);
-	--ion-breadcrumb-text-active: var(--ion-color-blue-b5);
-	--ion-breadcrumb-text-disabled: var(--ion-color-cool-grey-c4);
-
-	--ion-files-list-background-hover: var(--ion-color-blue-b1);
-	--ion-files-list-icon: var(--ion-color-blue-b4);
-
-	--ion-context-menu-background: var(--color-main-background);
-	--ion-context-menu-border: var(--ion-color-blue-b4);
-	--ion-context-menu-item-background-hover: var(--ion-color-blue-b1);
-	--ion-context-menu-item-background-active: var(--ion-color-blue-b2);
-	--ion-context-menu-item-background-disabled: var(--ion-context-menu-background);
-	--ion-context-menu-item-text: var(--ion-color-secondary);
-	--ion-context-menu-item-text-disabled: var(--ion-color-cool-grey-c4);
-}
-
 #body-user {
 	.files-list__filters {
 		display: none;
@@ -160,7 +142,7 @@
 			.files-list__row-actions {
 				.action-items {
 					color: var(--ion-files-list-icon);
-				}	
+				}
 				.icon-vue {
 					color: var(--ion-files-list-icon);
 				}
@@ -169,7 +151,7 @@
 				}
 			}
 		}
-	
+
 		/* mobile and tablet */
 		@media only screen and (max-width: 1199px) {
 			.files-list__filters {
@@ -177,7 +159,7 @@
 			}
 		}
 	}
-	
+
 	tfoot.files-list__tfoot tr td.files-list__column.files-list__row-size,
 	td[data-cy-files-list-row-size].files-list__row-size {
 		justify-content: normal;
@@ -195,20 +177,20 @@
 	div.v-popper--theme-dropdown.v-popper__popper:has(.v-popper__wrapper) {
 		border-radius: 16px;
 		filter: none;
-	
+
 		div.v-popper__wrapper {
 			border-radius: inherit;
 			border: 1px solid var(--ion-context-menu-border);
-	
+
 			div.v-popper__inner {
 				padding: 2px 12px;
 				background-color: var(--ion-context-menu-background);
-	
+
 				li.action:has(button.action-button) {
 					&.active {
 						background-color: var(--ion-context-menu-item-background-hover);
 					}
-	
+
 					button.action-button {
 						border-radius: 8px;
 						color: var(--ion-context-menu-item-text);
