@@ -6,6 +6,14 @@
 	border-radius: 0;
 	box-sizing: content-box;
 
+	/* icons size */
+	a.icon-home,
+	label.button.icon-toggle-pictures,
+	label.button.icon-toggle-filelist {
+		background-size: 20px;
+	}
+
+
 	div#files-public-content {
 		.files-controls {
 			height: 80px;
