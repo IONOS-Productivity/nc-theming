@@ -329,4 +329,15 @@
 			}
 		}
 	}
+
+	/* share settings icons */
+	.avatar-external.icon-external-white {
+		background-size: 16px;
+	}
+	.avatar-class-icon.avatar-link-share.icon-public-white {
+		background-size: 18px;
+	}
+	.avatar-shared.icon-more-white {
+		background-size: 18px;
+	}
 }
