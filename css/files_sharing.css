@@ -56,11 +56,19 @@
 
 				.newFileMenu {
 					top: 50px;
-					padding: 2px 12px;
+					padding: 12px;
 					background-color: var(--ion-color-main-background);
 					border: 1px solid var(--ion-context-menu-border);
 					border-radius: 16px;
-					z-index: 100000;
+					z-index: 100;
+
+					&::after {
+						display: none;
+					}
+
+					ul {
+						gap: 12px;
+					}
 				}
 
 				#uploadprogresswrapper {
@@ -77,7 +85,10 @@
 
 		#imgframe {
 			padding-bottom: 16px;
-			margin-top: 10%;
+
+			&:not(:has(#viewer)) {
+				margin-top: 20%;
+			}
 		}
 
 		#downloadFile.button {
@@ -127,9 +138,15 @@
 
 	.files-filestable.list-container {
 		tr {
-			display: block;
-			padding-right: 44px;
 			border-bottom: 1px solid var(--color-border);
+
+			td:last-child {
+				padding-right: 44px;
+			}
+
+			th:last-child {
+				padding-right: 60px;
+			}
 		}
 	}
 }
@@ -247,5 +264,26 @@
 		font-style: normal;
 		font-weight: 600;
 		line-height: 24px;
+	}
+}
+
+.guest-box {
+	background-color: var(--ion-color-cool-grey-c1);
+	border-radius: 16px;
+	padding: 16px;
+	width: 85%;
+	max-width: 466px;
+	min-width: fit-content;
+	margin-top: 40% !important;
+
+	fieldset {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 13px;
+
+		p {
+			width: 100%;
+		}
 	}
 }
