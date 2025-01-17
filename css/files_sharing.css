@@ -18,6 +18,13 @@
 	border-radius: 0;
 	box-sizing: content-box;
 
+	/* icons size */
+	a.icon-home,
+	label.button.icon-toggle-pictures,
+	label.button.icon-toggle-filelist {
+		background-size: 16px;
+	}
+
 	div#files-public-content {
 		margin-bottom: var(--footer-height);
 
@@ -193,6 +200,9 @@
 	}
 
 	.menutoggle {
+		width: 24px;
+		height: 44px;
+		background-size: 24px;
 		@media (prefers-color-scheme: light) {
 			background-image: var(--icon-comment-dark);
 			filter: var(--ion-icon-filter-secondary);
