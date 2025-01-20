@@ -183,6 +183,7 @@
 			width: 32px !important;
 			min-width: 32px;
 			min-height: 32px;
+			margin: auto 0;
 			&.button-vue--vue-tertiary {
 				.button-vue__icon span[role=img]>svg {
 					color: var(--ion-button--icon-only-text)
