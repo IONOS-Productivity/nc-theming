@@ -122,6 +122,20 @@
 				color: var(--ion-button-secondary-text-disabled);
 			}
 		}
+
+		.breadcrumb {
+			.crumbhome a {
+				padding: 12px 12px 12px 35px;
+				background-image: var(--icon-home-dark);
+				background-repeat: no-repeat;
+				background-size: 16px;
+				background-position: 4px 15px; 
+			}
+
+			li.crumb { 
+				height: 51px; 
+			}
+		}
 	}
 
 	.thumbnail {
