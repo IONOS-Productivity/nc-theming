@@ -70,7 +70,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$originalFontFace = $defaultVariables['--font-face'];
 
 		// IONOS COLORS
-		$ionColorMainBackground = '#fff';
+		$ionColorMainBackground = 'light-dark(#fff, var(--ion-color-blue-b9))';
 		$ionColorPrimary = '#003d8f';
 		$ionColorBlueB1 = '#dbedf8';
 		$ionColorBlueB2 = '#95caeb';
@@ -89,9 +89,8 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionColorCoolGreyC6 = '#465A75';
 		$ionColorCoolGreyC7 = '#2E4360';
 		$ionColorCoolGreyC8 = '#1D2D42';
-		$ionColorTypoMild = '#2e4360';
+		$ionColorTypoMild = 'light-dark(var(--ion-color-cool-grey-c7), var(--ion-color-cool-grey-c1))';
 		$ionColorLightGrey = '#d7d7d7';
-
 		$ionColorGreenG3 = '#12cf76';
 		$ionColorRoseR3 = '#ff6159';
 		$ionColorSkyS3 = '#11c7e6';
@@ -130,12 +129,6 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--ion-color-amber-y6' => $ionColorAmberY6,
 		];
 
-		// COLOR MAPPING
-		$colorMainText = $ionColorTypoMild;
-		$colorMainTextRgb = join(',', $this->util->hexToRGB($colorMainText));
-		$colorTextMaxcontrast = $ionColorTypoMild;
-
-
 		$colorMainBackground = '#fff';
 		$colorMainBackgroundRGB = join(',', $this->util->hexToRGB($colorMainBackground));
 		$colorBoxShadow = $this->util->darken($colorMainBackground, 70);
@@ -148,7 +141,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$colorInfo = $ionColorSkyS3;
 
 		$variables = [
-			'--color-main-background' => $colorMainBackground,
+			'--color-main-background' => $ionColorMainBackground,
 			'--color-main-background-rgb' => $colorMainBackgroundRGB,
 			'--color-main-background-translucent' => 'rgba(var(--color-main-background-rgb), .97)',
 			'--color-main-background-blur' => 'rgba(var(--color-main-background-rgb), .8)',
@@ -167,14 +160,14 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--color-placeholder-dark' => $this->util->darken($colorMainBackground, 20),
 
 			// max contrast for WCAG compliance
-			'--color-main-text' => $colorMainText,
-			'--color-text-maxcontrast' => $colorTextMaxcontrast,
-			'--color-text-maxcontrast-default' => $colorTextMaxcontrast,
-			'--color-text-maxcontrast-background-blur' => $this->util->darken($colorTextMaxcontrast, 7),
+			'--color-main-text' => $ionColorTypoMild,
+			'--color-text-maxcontrast' => $ionColorTypoMild,
+			'--color-text-maxcontrast-default' => $ionColorTypoMild,
+			'--color-text-maxcontrast-background-blur' => $ionColorTypoMild,
 			'--color-text-light' => 'var(--color-main-text)', // deprecated
 			'--color-text-lighter' => 'var(--color-text-maxcontrast)', // deprecated
 
-			'--color-scrollbar' => 'rgba(' . $colorMainTextRgb . ', .15)',
+			'--color-scrollbar' => $ionColorTypoMild,
 
 			// error/warning/success/info feedback colours
 			'--color-error' => $colorError,
