@@ -135,7 +135,7 @@
 
 	div[data-cy-files-list].files-list {
 		.files-list__row {
-			&:hover ,&.active {
+			&:hover ,&.active ,&.files-list__row--active {
 				background-color: var(--ion-files-list-background-hover);
 			}
 			.files-list__row-icon {
@@ -150,6 +150,16 @@
 				}
 				.material-design-icon{
 					color: var(--ion-files-list-icon);
+				}
+				.button-vue--icon-and-text {
+					background-color: var(--ion-button-secondary-background-default);
+					border: 2px solid transparent;
+					&:hover {
+						border: var(--ion-button-secondary-border-default);
+					}
+					.button-vue__text {
+						color: var(--ion-button-secondary-text);
+					}
 				}
 			}
 		}
