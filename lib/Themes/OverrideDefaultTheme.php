@@ -57,15 +57,11 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		return 'The default NC appearance.';
 	}
 
-	public function getMediaQuery(): string {
-		return '(prefers-color-scheme: light)';
-	}
-
 	public function getMeta(): array {
 		// https://html.spec.whatwg.org/multipage/semantics.html#meta-color-scheme
 		return [[
 			'name' => 'color-scheme',
-			'content' => 'light',
+			'content' => 'light dark',
 		]];
 	}
 
