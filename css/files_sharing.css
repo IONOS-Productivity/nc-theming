@@ -25,7 +25,7 @@
 		background-size: 16px;
 	}
 
-	div#files-public-content {
+	div#files-public-content, #public-upload {
 		margin-bottom: var(--footer-height);
 
 		.files-controls {
@@ -58,6 +58,11 @@
 					&:active:not(:disabled):not(.button-vue--disabled) {
 						background-color: var(--ion-button-primary-background-active);
 						border-color: var(--ion-button-primary-background-active);
+					}
+
+					.icon-add {
+						filter: var(--ion-icon-filter-secondary-text-hover);
+						opacity: 1;
 					}
 				}
 
@@ -98,7 +103,7 @@
 			}
 		}
 
-		#downloadFile.button {
+		#downloadFile.button, div#emptycontent > .button.icon-upload {
 			margin-top: 48px;
 			background-color: var(--ion-button-secondary-background-default);
 			border: var(--ion-button-secondary-border-default);
@@ -112,10 +117,37 @@
 			align-items: center;
 			justify-content: center;
 			gap: 6px;
+			opacity: 1;
+
+			.icon {
+				filter: var(--ion-icon-filter-blue-b8);
+				opacity: 1;
+			}
+
+			&:not(:has(> .icon)) {
+				padding-left: 42px;
+
+				&:hover::before {
+					content: "";
+					width: 16px;
+					height: 16px;
+					background-image: inherit;
+					filter: var(--ion-icon-filter-secondary-text-hover);
+					position: relative;
+					margin-left: -26px;
+					margin-right: 6px;
+				}
+			}
 
 			&:hover {
 				background-color: var(--ion-button-secondary-background-hover);
 				color: var(--ion-button-secondary-text-hover);
+				opacity: 1;
+
+				.icon {
+					filter: var(--ion-icon-filter-secondary-text-hover);
+					opacity: 1;
+				}
 			}
 
 			&:active {
@@ -130,17 +162,29 @@
 			}
 		}
 
+		div#emptycontent, .emptycontent {
+			.icon-folder, &:not(:hover) .icon-upload {
+				filter: var(--ion-icon-filter-blue-b8);
+				opacity: 1;
+			}
+		}
+
 		.breadcrumb {
+			filter: var(--ion-icon-filter-blue-b8);
+
 			.crumbhome a {
 				padding: 12px 12px 12px 35px;
 				background-image: var(--icon-home-dark);
 				background-repeat: no-repeat;
 				background-size: 16px;
-				background-position: 4px 15px; 
+				background-position: 4px 15px; opacity: 1;
 			}
 
-			li.crumb { 
-				height: 51px; 
+			li.crumb {
+				height: 51px; a {
+					color: var(--ion-color-secondary);
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -155,18 +199,94 @@
 		right: 20px;
 		position: relative;
 		z-index: 61;
+		filter: var(--ion-icon-filter-blue-b8);
+		opacity: 1;
+		background-color: transparent;
 	}
 
 	.files-filestable.list-container {
 		tr {
-			border-bottom: 1px solid var(--color-border);
-
 			td:last-child {
 				padding-right: 44px;
 			}
 
 			th:last-child {
 				padding-right: 60px;
+			}
+
+			.columntitle {
+				color: var(--ion-color-secondary);
+				font-weight: 600;
+			}
+
+			.sort-indicator {
+				filter: var(--ion-icon-filter-blue-b8);
+				opacity: 1;
+			}
+
+			.fileactions {
+				display: flex;
+				align-items: center;
+				margin-right: 5px;
+				top: 5px;
+
+				a.action[data-action="menu"] {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 32px;
+					height: 32px;
+					border-radius: 30px;
+					filter: var(--ion-icon-filter-blue-b4);
+					opacity: 1;
+
+					&:focus {
+						filter: none;
+
+						.icon {
+							filter: var(--ion-icon-filter-blue-b4);
+						}
+					}
+
+					&:hover {
+						background-color: var(--ion-color-blue-b4);
+						filter: none;
+
+						.icon {
+							filter: var(--ion-icon-filter-secondary-text-hover);
+						}
+					}
+				}
+
+			}
+		}
+
+		.checkbox+label:before {
+			border: 2px solid var(--ion-color-cool-grey-c5);
+		}
+
+		.checkbox:hover+label:before  {
+			border-color: var(--ion-color-blue-b4);
+		}
+
+		.checkbox:checked+label:before {
+			background-color: var(--ion-color-blue-b4);
+			border-color: var(--ion-color-blue-b4);
+		}
+
+		&.view-grid tbody {
+			border-bottom: 1px solid var(--color-border);
+		}
+	}
+
+	.popovermenu {
+		li {
+			.menuitem:hover {
+				background-color: var(--ion-files-list-background-hover);
+			}
+
+			.icon {
+				filter: var(--ion-icon-filter-blue-b8);
 			}
 		}
 	}
@@ -229,9 +349,17 @@
 		font-size: 14px;
 		padding: 8px 16px;
 
+		&:not(:hover) ionos-icons {
+			filter: var(--ion-icon-filter-blue-b8);
+		}
+
 		&:hover {
 			background-color: var(--ion-button-secondary-background-hover);
 			color: var(--ion-button-secondary-text-hover);
+
+			ionos-icons {
+				filter: var(--ion-icon-filter-secondary-text-hover);
+			}
 		}
 
 		&:active {
@@ -243,6 +371,10 @@
 		&:disabled {
 			background-color: var(--ion-button-secondary-background-disabled);
 			color: var(--ion-button-secondary-text-disabled);
+		}
+
+		&:not(:disabled):focus {
+			box-shadow: none;
 		}
 
 		.download {
@@ -276,6 +408,20 @@
 
 				input#directLink {
 					margin-left: 0;
+				}
+
+				li {
+					a:hover, button:hover {
+						background-color: var(--ion-files-list-background-hover);
+					}
+
+					button:hover, button:focus {
+						filter: none;
+					}
+
+					.icon {
+						filter: var(--ion-icon-filter-blue-b8);
+					}
 				}
 			}
 		}
