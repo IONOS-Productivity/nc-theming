@@ -13,3 +13,9 @@
 	width: 100%;
 	border-radius: 0;
 }
+
+#body-login {
+ .svg.icon-confirm {
+	background-size: 24px;
+ }
+}
