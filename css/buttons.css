@@ -316,7 +316,9 @@
 		height: 24px;
 		width: 24px;
 	}
+}
 
+#body-user, #body-public {
 	div.modal-mask .modal-header {
 		.modal-header__name {
 			color: var(--background-image-color-text);
