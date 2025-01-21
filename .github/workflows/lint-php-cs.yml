@@ -41,5 +41,8 @@ jobs:
       - name: Build
         run: make build_css
 
+      - name: reformat generated PHP files
+        run: ./vendor/bin/php-cs-fixer fix lib/Themes/CustomCss.php
+
       - name: Lint
         run: composer run cs:check || ( echo 'Please run `composer run cs:fix` to format your code' && exit 1 )
