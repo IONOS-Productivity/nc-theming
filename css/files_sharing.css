@@ -203,6 +203,7 @@
 		width: 24px;
 		height: 44px;
 		background-size: 24px;
+		cursor: pointer;
 		@media (prefers-color-scheme: light) {
 			background-image: var(--icon-comment-dark);
 			filter: var(--ion-icon-filter-secondary);
@@ -250,6 +251,7 @@
 	}
 
 	#header-actions-toggle {
+		cursor: pointer;
 		background-color: var(--ion-color-main-background);;
 	}
 
