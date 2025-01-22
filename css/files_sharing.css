@@ -243,6 +243,10 @@
 			background-color: var(--ion-button-secondary-background-disabled);
 			color: var(--ion-button-secondary-text-disabled);
 		}
+
+		.download {
+			margin-right: 8px;
+		}
 	}
 
 	#header-actions-toggle {
