@@ -237,6 +237,7 @@
 					width: 32px;
 					height: 32px;
 					border-radius: 30px;
+					padding: 0;
 					filter: var(--ion-icon-filter-blue-b4);
 					opacity: 1;
 
@@ -276,6 +277,14 @@
 
 		&.view-grid tbody {
 			border-bottom: 1px solid var(--color-border);
+
+			td.selection {
+				background-color: transparent;
+
+				label {
+					display: grid;
+				}
+			}
 		}
 	}
 
