@@ -227,8 +227,7 @@
 			.fileactions {
 				display: flex;
 				align-items: center;
-				margin-right: 5px;
-				top: 5px;
+				padding: 6px;
 
 				a.action[data-action="menu"] {
 					display: flex;
