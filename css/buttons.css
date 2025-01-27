@@ -279,8 +279,14 @@
 					color: var(--ion-color-typo-mild);
 					font-weight: 600;
 				}
-				.button-vue__icon span[role=img]>svg {
-					color: var(--ion-color-typo-mild);
+				.button-vue__icon {
+					flex: 1;
+					min-width: 16px;
+					max-width: max-content;
+
+					span[role=img]>svg {
+						color: var(--ion-color-typo-mild);
+					}
 				}
 
 				&:hover {
