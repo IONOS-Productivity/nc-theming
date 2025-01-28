@@ -276,6 +276,7 @@
 
 		&.view-grid tbody {
 			border-bottom: 1px solid var(--color-border);
+			padding-bottom: 15px;
 
 			td.selection {
 				background-color: transparent;
