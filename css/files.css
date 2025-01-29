@@ -170,7 +170,16 @@
 	}
 
 	tbody.files-list__tbody--grid .files-list__row-icon {
-		transform: scale(.7);
+		.folder-icon {
+			justify-content: center;
+		}
+
+		img, svg {
+			width: auto;
+			height: auto;
+			min-width: 42px;
+			min-height: 60%;
+		}
 	}
 
 	/* Context Menu */
