@@ -287,6 +287,25 @@
 					display: grid;
 				}
 			}
+
+			.thumbnail-wrapper {
+				display: flex;
+				justify-content: center;
+				padding: 0;
+
+				.thumbnail {
+					width: 100%;
+					height: 100%;
+
+					&[style*="filetypes/"] {
+						background-size: 64%;
+					}
+				}
+			}
+
+			tr:not(:hover):not(.selected) .nametext {
+				background-color: var(--ion-color-main-background);
+			}
 		}
 	}
 
