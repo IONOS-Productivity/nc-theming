@@ -170,7 +170,6 @@
 		}
 
 		.breadcrumb {
-			filter: var(--ion-icon-filter-blue-b8);
 			.icon-more.menutoggle {
 				background-size: 17px;
 			}
