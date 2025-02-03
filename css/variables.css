@@ -69,4 +69,5 @@
 
 	--ion-surface-primary: var(--ion-color-main-background);
 	--ion-surface-secondary: light-dark(var(--ion-color-cool-grey-c1), var(--ion-color-cool-grey-c8));
+	--ion-surface-dialog: light-dark(#fff, var(--ion-color-cool-grey-c8));
 }
