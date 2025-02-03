@@ -238,4 +238,31 @@
 			}
 		}
 	}
+	/* File Picker*/
+	div.modal-container {
+		background-color: var(--ion-surface-dialog);
+		.dialog.file-picker {
+			.file-picker__files {
+				tr.file-picker__row {
+					&:hover {
+						background-color: var(--ion-files-list-background-hover);
+					}
+
+					[class*="_file-picker__file-icon_"] {
+						color: var(--ion-files-list-icon);
+					}
+				}
+			}
+		}
+		.v-popper__popper {
+			.v-popper-__inner {
+				background-color: var(--ion-surface-dialog);
+			}
+			[class*="trigger-menu"] {
+				li.action.active {
+					background-color: var(--ion-surface-dialog);
+				}
+			}
+		}
+	}
 }
