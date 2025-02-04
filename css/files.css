@@ -227,8 +227,13 @@
 			}
 		}
 	}
+
 	/* File Picker*/
 	div.modal-container {
+		&:has(.nc-generic-dialog) {
+			/* Delete Dialog */
+			border: 1px solid var(--ion-color-blue-b4);
+		}
 		background-color: var(--ion-surface-dialog);
 		.dialog.file-picker {
 			.file-picker__files {
