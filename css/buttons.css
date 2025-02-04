@@ -333,6 +333,13 @@
 		}
 	}
 
+	button.toast-close {
+		@media (prefers-color-scheme: dark) {
+			background-color: transparent;
+			filter: var(--ion-icon-filter-cool-grey-c1);
+		}
+	}
+
 	/* share settings icons */
 	.avatar-external.icon-external-white {
 		background-size: 16px;
