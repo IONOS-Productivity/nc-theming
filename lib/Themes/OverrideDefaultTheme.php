@@ -143,7 +143,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$variables = [
 			'--color-main-background' => $ionColorMainBackground,
 			'--color-main-background-rgb' => $colorMainBackgroundRGB,
-			'--color-main-background-translucent' => 'rgba(var(--color-main-background-rgb), .97)',
+			'--color-main-background-translucent' => 'light-dark(rgba(var(--color-main-background-rgb), .97), var(--ion-color-cool-grey-c8))',
 			'--color-main-background-blur' => 'rgba(var(--color-main-background-rgb), .8)',
 			'--color-primary' => $colorPrimary,
 			'--color-primary-element' => $colorPrimary,
