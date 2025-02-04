@@ -65,7 +65,10 @@
 	--ion-icon-filter-secondary: invert(8%) sepia(43%) saturate(7496%) hue-rotate(218deg) brightness(90%) contrast(91%);
 	--ion-icon-filter-secondary-text-hover: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7460%) hue-rotate(259deg) brightness(112%) contrast(100%);
 	--ion-icon-filter-blue-b4: brightness(0) saturate(100%) invert(37%) sepia(26%) saturate(3654%) hue-rotate(185deg) brightness(88%) contrast(90%);
+	--ion-icon-filter-blue-b5: brightness(0) saturate(100%) invert(21%) sepia(91%) saturate(6261%) hue-rotate(202deg) brightness(87%) contrast(93%);
+	--ion-icon-filter-blue-b6: brightness(0) saturate(100%) invert(9%) sepia(91%) saturate(5873%) hue-rotate(206deg) brightness(85%) contrast(104%);
 	--ion-icon-filter-blue-b8: brightness(0) saturate(100%) invert(10%) sepia(32%) saturate(3782%) hue-rotate(197deg) brightness(98%) contrast(106%);
+	--ion-icon-filter-cool-grey-c1: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(874%) hue-rotate(176deg) brightness(100%) contrast(96%);
 
 	--ion-surface-primary: var(--ion-color-main-background);
 	--ion-surface-secondary: light-dark(var(--ion-color-cool-grey-c1), var(--ion-color-cool-grey-c8));
