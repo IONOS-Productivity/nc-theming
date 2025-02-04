@@ -243,14 +243,15 @@
 				}
 			}
 		}
-		.v-popper__popper {
-			.v-popper-__inner {
+	}
+
+	.v-popper__popper {
+		.v-popper__inner {
+			background-color: var(--ion-surface-dialog);
+		}
+		[class*="trigger-menu"], [aria-labelledby^="trigger-menu"] {
+			li.action.active {
 				background-color: var(--ion-surface-dialog);
-			}
-			[class*="trigger-menu"] {
-				li.action.active {
-					background-color: var(--ion-surface-dialog);
-				}
 			}
 		}
 	}
