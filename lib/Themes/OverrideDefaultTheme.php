@@ -95,6 +95,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$ionColorRoseR3 = '#ff6159';
 		$ionColorSkyS3 = '#11c7e6';
 		$ionColorAmberY3 = '#ffaa00';
+		$ionColorAmberY4 = '#EF8300';
 		$ionColorAmberY5 = '#c36b00';
 		$ionColorAmberY6 = '#8E4E00';
 
@@ -125,6 +126,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--ion-color-rose-r3' => $ionColorRoseR3,
 			'--ion-color-sky-s3' => $ionColorSkyS3,
 			'--ion-color-amber-y3' => $ionColorAmberY3,
+			'--ion-color-amber-y4' => $ionColorAmberY4,
 			'--ion-color-amber-y5' => $ionColorAmberY5,
 			'--ion-color-amber-y6' => $ionColorAmberY6,
 		];
