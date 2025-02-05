@@ -57,7 +57,7 @@
 					padding: 2px 0;
 					font-weight: 400;
 					color: var(--ion-breadcrumb-text-default);
-					background-color: var(--color-main-background);
+					background-color: transparent;
 
 					span.button-vue__text {
 						color: var(--ion-breadcrumb-text-default);
@@ -232,6 +232,10 @@
 	div.modal-container {
 		background-color: var(--ion-surface-dialog);
 
+		&:has(.viewer__content) {
+			background-color: transparent;
+		}
+
 		&:has(.nc-generic-dialog) {
 			/* Delete Dialog */
 			border: 1px solid var(--ion-color-blue-b4);
@@ -293,14 +297,65 @@
 
 		/* File Picker*/
 		.dialog.file-picker {
+			.input-field__input {
+				background-color: var(--ion-surface-dialog);
+			}
+
 			.file-picker__files {
+				thead th {
+					background-color: var(--ion-surface-dialog);
+				}
+
 				tr.file-picker__row {
 					&:hover {
 						background-color: var(--ion-files-list-background-hover);
+
+						@media (prefers-color-scheme: dark) {
+							background-color: var(--ion-color-cool-grey-c7);
+						}
 					}
 
 					[class*="_file-picker__file-icon_"] {
 						color: var(--ion-files-list-icon);
+					}
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				.file-picker__side li {
+					.button-vue--icon-and-text {
+						background-color: transparent !important;
+
+						&:hover {
+							background-color: var(--ion-button-sidebar-background-hover) !important;
+						}
+
+						&:active {
+							background-color: var(--ion-button-sidebar-background-active) !important;
+						}
+					}
+				}
+
+				.dialog__actions button.button-vue--vue-primary {
+					background-color: var(--ion-button-secondary-background-default);
+					border: var(--ion-button-secondary-border-default);
+
+
+					&:hover:not(:disabled):not(.button-vue--disabled) {
+						background-color: var(--ion-button-secondary-background-hover);
+						border-color: var(--ion-button-secondary-background-hover);
+
+						.button-vue__text, .button-vue__icon svg {
+							color: var(--ion-button-secondary-text-hover);
+						}
+					}
+
+					&:active:not(:disabled):not(.button-vue--disabled) {
+						background-color: var(--ion-button-secondary-background-active);
+
+						.button-vue__text, .button-vue__icon svg {
+							color: var(--ion-button-secondary-text-active);
+						}
 					}
 				}
 			}
@@ -309,7 +364,7 @@
 
 	.v-popper__popper {
 		.v-popper__inner {
-			background-color: var(--ion-surface-dialog);
+			background-color: var(--ion-surface-dialog) !important;
 			border-radius: inherit;
 
 			.searchable-list__list {
@@ -320,13 +375,16 @@
 					}
 				}
 			}
+
+			.input-field__input {
+				background-color: var(--ion-surface-dialog);
+			}
 		}
 		[class*="trigger-menu"], [aria-labelledby^="trigger-menu"] {
 			li.action.active {
 				background-color: var(--ion-surface-dialog);
 			}
 
-			
 			img.filter-button__icon {
 				@media (prefers-color-scheme: dark) {
 					filter: none;
