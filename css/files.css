@@ -228,13 +228,70 @@
 		}
 	}
 
-	/* File Picker*/
+	/* Dialogs */
 	div.modal-container {
+		background-color: var(--ion-surface-dialog);
+
 		&:has(.nc-generic-dialog) {
 			/* Delete Dialog */
 			border: 1px solid var(--ion-color-blue-b4);
 		}
-		background-color: var(--ion-surface-dialog);
+		&:has(.unified-search-modal) {
+			border: 0.5px solid #A3A3A3;
+			box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.25), -1px 0px 8px 0px rgba(0, 0, 0, 0.25);
+			.unified-search-modal__header, .input-field__input, .input-field__label {
+				background-color: var(--ion-surface-dialog);
+
+				.unified-search-modal__filters{
+					button.button-vue--vue-secondary.action-item__menutoggle[id*="trigger-menu"] {
+						background-color: var(--ion-dialog-filter-button-background);
+						&:hover {
+							background-color: var(--ion-button-tertiary-background-hover);
+						}
+						&:active {
+							background-color: var(--ion-button-tertiary-background-active);
+						}
+						span.button-vue__wrapper {
+							span.button-vue__text, .button-vue__icon svg {
+								color: var(--ion-button-tertiary-text) !important;
+							}
+						}
+					}
+				}
+
+				.unified-search-modal__filters-applied {
+					.chip {
+						background-color: var(--ion-chip-background);
+						color: var(--ion-chip-text);
+						border: none;
+
+						span.icon img {
+							@media (prefers-color-scheme: dark) {
+								filter: none;
+							}
+						}
+					}
+				}
+			}
+
+			.unified-search-modal__results {
+				h4.result-title {
+					color: var(--ion-text);
+				}
+
+				ul.result-items {
+					li.result-items__item div.list-item, li.result-items__item div.list-item a{
+						border: none;
+						&:hover, &.active {
+							background-color: var(--ion-files-list-background-hover);
+							border: none;
+						}
+					}
+				}
+			}
+		}
+
+		/* File Picker*/
 		.dialog.file-picker {
 			.file-picker__files {
 				tr.file-picker__row {
@@ -253,10 +310,27 @@
 	.v-popper__popper {
 		.v-popper__inner {
 			background-color: var(--ion-surface-dialog);
+			border-radius: inherit;
+
+			.searchable-list__list {
+				li button {
+					background-color: transparent !important;
+					&:hover, &:active {
+						background-color: var(--ion-files-list-background-hover) !important;
+					}
+				}
+			}
 		}
 		[class*="trigger-menu"], [aria-labelledby^="trigger-menu"] {
 			li.action.active {
 				background-color: var(--ion-surface-dialog);
+			}
+
+			
+			img.filter-button__icon {
+				@media (prefers-color-scheme: dark) {
+					filter: none;
+				}
 			}
 		}
 	}
