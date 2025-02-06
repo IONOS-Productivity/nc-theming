@@ -285,9 +285,10 @@
 
 				ul.result-items {
 					li.result-items__item div.list-item, li.result-items__item div.list-item a{
+						background-color: var(--ion-dialog-files-list-background);
 						border: none;
 						&:hover, &.active {
-							background-color: var(--ion-files-list-background-hover);
+							background-color: var(--ion-dialog-files-list-background-hover);
 							border: none;
 						}
 					}
@@ -307,7 +308,7 @@
 				}
 
 				tr.file-picker__row {
-					&:hover {
+					&:hover, &.file-picker__row--selected {
 						background-color: var(--ion-files-list-background-hover);
 
 						@media (prefers-color-scheme: dark) {
