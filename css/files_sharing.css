@@ -500,7 +500,8 @@
 }
 
 .guest-box {
-	background-color: var(--ion-color-cool-grey-c1);
+	background-color: light-dark(var(--ion-color-cool-grey-c1), var(--ion-color-cool-grey-c8));
+	color: var(--ion-text);
 	border-radius: 16px;
 	padding: 16px;
 	width: 85%;
