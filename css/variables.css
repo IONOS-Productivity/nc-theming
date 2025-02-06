@@ -77,6 +77,8 @@
 	--ion-surface-dialog: light-dark(#fff, var(--ion-color-cool-grey-c8));
 
 	--ion-dialog-filter-button-background: light-dark(var(--ion-color-cool-grey-c1), var(--ion-color-blue-b9));
+	--ion-dialog-files-list-background: transparent;
+	--ion-dialog-files-list-background-hover: light-dark(var(--ion-color-blue-b1), var(--ion-color-cool-grey-c7));
 
 	--ion-chip-background: light-dark(var(--ion-color-blue-b4), var(--ion-color-cool-grey-c6));
 	--ion-chip-text: #fff;
