@@ -15,6 +15,10 @@
 }
 
 #body-login {
+	#header .logo {
+		background-image: none;
+	}
+
  .svg.icon-confirm {
 	background-size: 24px;
  }
