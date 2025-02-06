@@ -359,3 +359,13 @@
 		background-size: 18px;
 	}
 }
+
+#body-login {
+	a.button:hover {
+		background-color: var(--ion-button-tertiary-background-hover);
+		color: var(--ion-button-tertiary-text-hover);
+	}
+	a.button:focus {
+		background-color: var(--color-main-background);
+	}
+}
