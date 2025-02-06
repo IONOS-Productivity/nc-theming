@@ -309,7 +309,7 @@
 
 		/* File Picker*/
 		.dialog.file-picker {
-			.input-field__input {
+			.input-field__input, .input-field__input:focus + .input-field__label {
 				background-color: var(--ion-surface-dialog);
 			}
 
