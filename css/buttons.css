@@ -257,7 +257,7 @@
 			color: var(--ion-color-cool-grey-c5);
 		}
 
-		&:hover {
+		:not(span[data-cy-files-sharing-share-permissions-bundle])&:hover {
 			.checkbox-content {
 				background: transparent;
 			}
