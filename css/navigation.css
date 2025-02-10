@@ -78,8 +78,8 @@
 			margin: 6px;
 			background-color: transparent;
 			span[role=img]>svg {
-				height: 24px;
-				width: 24px;
+				height: 16px;
+				width: 16px;
 				color: var(--ion-button-sidebar-text);
 			}
 			&:hover {
