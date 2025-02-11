@@ -213,11 +213,13 @@
 
 				&.files-list__header-grid-button {
 					&:hover {
+						background-color: transparent;
 						.button-vue__icon span[role=img]>svg {
 							color: var(--ion-color-blue-b5);
 						}
 					}
 					&:active {
+						background-color: transparent;
 						.button-vue__icon span[role=img]>svg {
 							color: var(--ion-color-typo-mild);
 						}
