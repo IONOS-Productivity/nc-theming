@@ -137,6 +137,10 @@
 		.files-list__row {
 			&:hover ,&.active ,&.files-list__row--active {
 				background-color: var(--ion-files-list-background-hover);
+
+				.favorite-marker-icon svg path {
+					stroke: var(--color-main-background);
+				}
 			}
 			.files-list__row-icon {
 				color: var(--ion-files-list-icon);
