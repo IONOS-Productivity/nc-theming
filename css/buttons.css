@@ -228,14 +228,14 @@
 					.button-vue__icon span[role=img]>svg {
 						width: 24px;
 						height: 24px;
-						color: var(--ion-color-cool-grey-c5);
+						color: light-dark(var(--ion-color-cool-grey-c5), var(--ion-color-cool-grey-c1));
 					}
 
 					&:hover {
 						background-color: transparent;
 
 						.button-vue__icon span[role=img]>svg {
-							color: var(--ion-color-cool-grey-c6);
+							color: light-dark(var(--ion-color-cool-grey-c6), var(--ion-color-cool-grey-c4));
 						}
 					}
 
