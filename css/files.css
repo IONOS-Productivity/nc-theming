@@ -408,4 +408,8 @@
 			}
 		}
 	}
+
+	::selection {
+		background-color: var(--ion-color-blue-b4);
+	}
 }
