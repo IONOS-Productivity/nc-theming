@@ -356,6 +356,9 @@
 	}
 	.avatar-class-icon.avatar-link-share.icon-public-white {
 		background-size: 18px;
+		@media (prefers-color-scheme: dark) {
+			background-image: var(--original-icon-public-white);
+		}
 	}
 	.avatar-shared.icon-more-white {
 		background-size: 18px;
