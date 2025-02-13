@@ -10,9 +10,12 @@ declare(strict_types=1);
 
 namespace OCA\NcTheming\AppInfo;
 
+use OC\AppFramework\Bootstrap\Coordinator;
 use OC\AppFramework\DependencyInjection\DIContainer;
+use OC\Search\SearchComposer;
 use OCA\NcTheming\Service\OverrideThemesService;
 use OCA\NcTheming\Themes\OverrideDefaultTheme;
+use OCA\NcTheming\Search\SearchComposerDecorator;
 use OCA\Theming\Service\ThemesService;
 use OCA\Theming\Themes\DarkHighContrastTheme;
 use OCA\Theming\Themes\DarkTheme;
@@ -26,11 +29,17 @@ use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\AppFramework\QueryException;
 use OCP\IConfig;
+use OCP\IURLGenerator;
 use OCP\IUserSession;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'nc_theming';
+
+	public const ALLOWED_SEARCH_PROVIDERS = [
+		'files',
+	];
 
 	/** @psalm-suppress PossiblyUnusedMethod */
 	public function __construct() {
@@ -75,8 +84,32 @@ class Application extends App implements IBootstrap {
 				$c->get(DyslexiaFont::class)
 			);
 		});
+
+		// allow only desired search providers for full-text search
+		$this->registerSearchComposerDecorator($context);
 	}
 
 	public function boot(IBootContext $context): void {
+	}
+
+	/**
+	 * Decorate SearchComposer with allowed search providers -
+	 * to ensure being listed and used for searches
+	 *
+	 * For allow list, the ids of the Search\IProvider is used
+	 */
+	protected function registerSearchComposerDecorator(IRegistrationContext $context) {
+		$this->getContainer()->getServer()->registerService(SearchComposer::class,
+			function ($c) {
+				return new SearchComposerDecorator(
+					new SearchComposer(
+						$c->get(Coordinator::class),
+						$c->get(ContainerInterface::class),
+						$c->get(IURLGenerator::class),
+						$c->get(LoggerInterface::class)
+					),
+					self::ALLOWED_SEARCH_PROVIDERS
+				);
+			});
 	}
 }
