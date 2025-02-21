@@ -312,6 +312,12 @@
 			}
 		}
 
+		@media only screen and (max-width: 512px) {
+			div.dialog__actions {
+				flex-wrap: wrap;
+			}
+		}
+
 		/* File Picker*/
 		.dialog.file-picker {
 			.input-field__input, .input-field__input:focus + .input-field__label {
