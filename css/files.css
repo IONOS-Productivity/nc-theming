@@ -246,6 +246,7 @@
 	/* Dialogs */
 	div.modal-container {
 		background-color: var(--ion-surface-dialog);
+		min-width: min-content;
 
 		&:has(.viewer__content) {
 			background-color: transparent;
@@ -308,6 +309,12 @@
 						}
 					}
 				}
+			}
+		}
+
+		@media only screen and (max-width: 512px) {
+			div.dialog__actions {
+				flex-wrap: wrap;
 			}
 		}
 
