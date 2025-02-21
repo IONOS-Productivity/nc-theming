@@ -246,6 +246,7 @@
 	/* Dialogs */
 	div.modal-container {
 		background-color: var(--ion-surface-dialog);
+		min-width: min-content;
 
 		&:has(.viewer__content) {
 			background-color: transparent;
