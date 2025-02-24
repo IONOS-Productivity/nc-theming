@@ -146,6 +146,8 @@
 				color: var(--ion-files-list-icon);
 			}
 			.files-list__row-actions {
+				right: 0;
+				bottom: 2px;
 				.action-items {
 					color: var(--ion-files-list-icon);
 				}
