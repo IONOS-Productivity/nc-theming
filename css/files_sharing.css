@@ -14,7 +14,7 @@
 	margin: 0;
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - var(--footer-height));
 	border-radius: 0;
 	box-sizing: content-box;
 
@@ -27,6 +27,7 @@
 
 	div#files-public-content, #public-upload {
 		margin-bottom: var(--footer-height);
+		padding-bottom: var(--footer-height);
 
 		.files-controls {
 			background-color: var(--ion-color-main-background);
@@ -383,6 +384,11 @@
 			}
 		}
 	}
+}
+
+#body-public footer {
+	width: calc(100% - 3* var(--body-container-margin));
+	bottom: 0;
 }
 
 #notemenu {
