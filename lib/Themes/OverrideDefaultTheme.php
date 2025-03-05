@@ -136,6 +136,7 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 		$colorBoxShadow = $this->util->darken($colorMainBackground, 70);
 		$colorBoxShadowRGB = join(',', $this->util->hexToRGB($colorBoxShadow));
 		$colorPrimary = $ionColorPrimary;
+		$colorShadowHeader = 'light-dark(' . 'rgba(113, 128, 149, 0.5)' . ', ' . 'rgba(113, 128, 149, 0.2)' . ')';
 
 		$colorError = $ionColorRoseR3;
 		$colorWarning = $ionColorAmberY3;
@@ -196,9 +197,10 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 			'--color-box-shadow-rgb' => $colorBoxShadowRGB,
 			'--color-box-shadow' => 'rgba(var(--color-box-shadow-rgb), 0.5)',
 
-			'--color-border' => $this->util->darken($colorMainBackground, 7),
+			'--color-border' => 'light-dark(' . $this->util->darken($colorMainBackground, 7) . ', rgba(255, 255, 255, 0.1))',
 			'--color-border-dark' => $this->util->darken($colorMainBackground, 14),
 			'--color-border-maxcontrast' => $this->util->darken($colorMainBackground, 51),
+			'--color-shadow-header' => $colorShadowHeader,
 
 			'--default-font-size' => '15px',
 
