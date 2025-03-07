@@ -14,7 +14,7 @@
 	margin: 0;
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - var(--footer-height));
 	border-radius: 0;
 	box-sizing: content-box;
 
@@ -27,6 +27,7 @@
 
 	div#files-public-content, #public-upload {
 		margin-bottom: var(--footer-height);
+		padding-bottom: var(--footer-height);
 
 		.files-controls {
 			background-color: var(--ion-color-main-background);
@@ -111,7 +112,7 @@
 		}
 
 		#downloadFile.button, div#emptycontent > .button.icon-upload {
-			margin-top: 48px;
+			margin-top: 36px;
 			background-color: var(--ion-button-secondary-background-default);
 			border: var(--ion-button-secondary-border-default);
 			color: var(--ion-button-secondary-text);
@@ -382,6 +383,17 @@
 				filter: light-dark(var(--ion-icon-filter-blue-b8), var(--ion-icon-filter-cool-grey-c1));
 			}
 		}
+	}
+}
+
+#body-public, #body-login {
+	footer {
+		width: calc(100% - var(--body-container-margin));
+		border-radius: 0;
+		bottom: 0;
+		left: -10px;
+		margin-bottom: 0;
+		max-width: 100%;
 	}
 }
 
