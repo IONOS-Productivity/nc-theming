@@ -287,8 +287,12 @@
 						color: var(--ion-chip-text);
 						border: none;
 
-						span.icon img {
-							@media (prefers-color-scheme: dark) {
+						span.icon {
+							.calendar-range-icon {
+								width: 20px;
+								height: 20px;
+							}
+							img {
 								filter: none;
 							}
 						}
