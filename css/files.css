@@ -135,8 +135,15 @@
 
 	div[data-cy-files-list].files-list {
 		.files-list__row {
-			&:hover ,&.active ,&.files-list__row--active {
+			&:hover {
 				background-color: var(--ion-files-list-background-hover);
+
+				.favorite-marker-icon svg path {
+					stroke: var(--color-main-background);
+				}
+			}
+			&:active, &.files-list__row--active, &:has(.checkbox-radio-switch--checked) {
+				background-color: var(--ion-files-list-background-active);
 
 				.favorite-marker-icon svg path {
 					stroke: var(--color-main-background);
