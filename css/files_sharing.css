@@ -26,6 +26,10 @@
 		div.sharingTabDetailsView__quick-permissions {
 			span.checkbox-radio-switch {
 				padding: 8px;
+
+				.checkbox-content__icon--checked svg {
+					color: #fff;
+				}
 			}
 		}
 	}
