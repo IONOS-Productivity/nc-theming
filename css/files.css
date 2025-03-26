@@ -432,4 +432,15 @@
 	::selection {
 		background-color: var(--ion-color-blue-b4);
 	}
+
+	.toastify.dialogs {
+		min-width: 0;
+		padding-right: 14px;
+
+		.toast-close {
+			margin-right: 0;
+			padding-right: 0;
+			min-width: 0;
+		}
+	}
 }
