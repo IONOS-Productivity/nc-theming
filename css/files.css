@@ -242,6 +242,10 @@
 							background-color: var(--ion-context-menu-item-background-disabled);
 							cursor: not-allowed;
 						}
+
+						.folder-upload-icon {
+							color: var(--ion-context-menu-item-text) !important;
+						}
 					}
 				}
 			}
