@@ -10,6 +10,27 @@
 	}
 }
 
+#app-sidebar-vue.app-sidebar {
+	div.sharingTab {
+		.sharingTab__content {
+			ul {
+				padding: 4px 0;
+
+				&.sharing-link-list {
+					div.sharing-entry__desc {
+						gap: 5px;
+					}
+				}
+			}
+		}
+		div.sharingTabDetailsView__quick-permissions {
+			span.checkbox-radio-switch {
+				padding: 8px;
+			}
+		}
+	}
+}
+
 #content.app-files_sharing {
 	margin: 0;
 	display: flex;
