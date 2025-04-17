@@ -21,7 +21,7 @@
 	}
 
 	thead.files-list__thead tr,
-	tbody.files-list__tbody.files-list__tbody--list tr,
+	tbody.files-list__tbody tr.files-list__row,
 	tfoot.files-list__tfoot tr {
 		padding-right: 44px;
 		padding-left: 4px;
