@@ -25,6 +25,10 @@
 	tfoot.files-list__tfoot tr {
 		padding-right: 44px;
 		padding-left: 4px;
+
+		@media only screen and (max-width: 512px) {
+			padding-right: 16px;
+		}
 	}
 
 	.files-list__header-grid-button {
