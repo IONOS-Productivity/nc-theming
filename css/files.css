@@ -440,6 +440,10 @@
 					filter: none;
 				}
 			}
+
+			li[data-cy-upload-picker-menu-entry^="template-new-richdocuments"] {
+				display: none;
+			}
 		}
 	}
 

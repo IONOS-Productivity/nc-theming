@@ -112,6 +112,9 @@
 							&:hover, &.active {
 								background-color: var(--ion-files-list-background-hover);
 							}
+							&[data-filetype^="x-office"] {
+								display: none;
+							}
 						}
 					}
 				}
