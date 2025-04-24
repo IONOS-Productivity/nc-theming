@@ -106,7 +106,9 @@
 					}
 
 					ul {
-						gap: 12px;
+						li:first-child {
+							padding-bottom: 12px;
+						}
 
 						li>a.menuitem {
 							&:hover, &.active {
