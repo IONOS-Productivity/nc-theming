@@ -407,6 +407,12 @@
 			.icon {
 				filter: light-dark(var(--ion-icon-filter-blue-b8), var(--ion-icon-filter-cool-grey-c1));
 			}
+
+			a[data-action="view"]>.icon {
+				@media (prefers-color-scheme: dark) {
+					filter: invert(1);
+				}
+			}
 		}
 	}
 }
