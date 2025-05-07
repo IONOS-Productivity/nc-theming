@@ -31,6 +31,13 @@ class ApplicationTest extends TestCase {
 		$this->app->register($coordinator->getRegistrationContext()->for('nc_theming'));
 
 		$this->context = $this->createMock(IRegistrationContext::class);
+
+		$this->serverOriginal = \OC::$server;
+	}
+
+	protected function tearDown(): void {
+		parent::tearDown();
+		\OC::$server = $this->serverOriginal;
 	}
 
 	public function testThemingOverrideRegistration(): void {
