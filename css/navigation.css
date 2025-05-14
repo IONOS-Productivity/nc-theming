@@ -54,6 +54,11 @@
 			}
 		}
 
+
+		li[data-cy-files-navigation-item="pendingshares"] {
+			display: none;
+		}
+
 		/* Navigation Toggle Button */
 		div.app-navigation-toggle-wrapper button.app-navigation-toggle.button-vue--icon-only {
 			margin: 18px 0;
