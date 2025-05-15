@@ -198,7 +198,7 @@
 		}
 	}
 
-	tbody.files-list__tbody--grid .files-list__row-icon {
+	div.files-list--grid tbody.files-list__tbody .files-list__row-icon {
 		.folder-icon {
 			justify-content: center;
 		}
@@ -207,7 +207,7 @@
 			width: auto;
 			height: auto;
 			min-width: 42px;
-			min-height: 60%;
+			min-height: 80%;
 		}
 	}
 
