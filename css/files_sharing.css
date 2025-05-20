@@ -374,6 +374,9 @@
 				td.selection label {
 					display: grid;
 				}
+				&:not(:hover):not(.selected) .fileactions {
+					background-color: var(--ion-color-main-background);
+				}
 			}
 
 			.thumbnail-wrapper {
