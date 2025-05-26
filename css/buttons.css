@@ -410,6 +410,14 @@
 				border: none;
 			}
 		}
+
+		.FIE_topbar-buttons-wrapper {
+			gap: 12px;
+		}
+
+		.SfxCrossButton-root svg path {
+			transform: scale(1);
+		}
 	}
 }
 
