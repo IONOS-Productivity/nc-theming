@@ -363,6 +363,54 @@
 	.avatar-shared.icon-more-white {
 		background-size: 18px;
 	}
+
+	/* image editor buttons */
+	.viewer__image-editor, div#SfxPopper, div.SfxModal-Wrapper {
+		@media (prefers-color-scheme: dark) {
+			div.FIE_tab, .FIE_tools-items div, .SfxPopper-root div, .SfxSelect-root {
+				background-color: var(--ion-surface-secondary);
+
+				&[aria-selected="true"] {
+					border: var(--ion-button-secondary-border-default);
+					box-shadow: none;
+				}
+
+				svg {
+					color: var(--color-main-text);
+				}
+			}
+
+			button, .SfxMenuItem-root {
+				background-color: var(--ion-surface-secondary);
+				color: var(--ion-button-secondary-text);
+
+				&:disabled {
+					background-color: transparent !important;
+				}
+
+				&:hover {
+					background-color: var(--color-background-hover);
+
+					&:not(:disabled), svg, .SfxSelect-tickIcon, &::before {
+						color: var(--color-main-text);
+					}
+				}
+
+				&[color="primary"] {
+					background-color: var(--ion-button-primary-background-default) !important;
+
+					&:hover {
+						background-color: var(--ion-button-primary-background-hover) !important;
+					}
+				}
+			}
+
+			.SfxInput-root:not(.SfxSelect-root) {
+				background-color: transparent;
+				border: none;
+			}
+		}
+	}
 }
 
 #body-login {
