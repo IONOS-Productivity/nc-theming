@@ -119,9 +119,16 @@
 				#uploadprogresswrapper {
 					position: absolute;
 					right: 120px;
+					display: flex;
 
 					:has([style*="display:none"]) {
 						display: none;
+					}
+
+					#uploadprogressbar+.stop {
+						margin: 1px 0 0 -2px;
+						min-height: 42px;
+						max-height: 42px;
 					}
 				}
 			}
