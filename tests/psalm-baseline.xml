@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="lib/AppInfo/Application.php">
+    <MissingClosureParamType>
+      <code><![CDATA[$c]]></code>
+    </MissingClosureParamType>
+    <MissingClosureReturnType>
+      <code><![CDATA[function ($c) {]]></code>
+    </MissingClosureReturnType>
+    <MissingDependency>
+      <code><![CDATA[OverrideDefaultTheme]]></code>
+      <code><![CDATA[OverrideThemesService]]></code>
+    </MissingDependency>
+    <MixedInferredReturnType>
+      <code><![CDATA[DIContainer]]></code>
+    </MixedInferredReturnType>
+    <MixedMethodCall>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+    </MixedMethodCall>
+    <UndefinedClass>
+      <code><![CDATA[DarkHighContrastTheme]]></code>
+      <code><![CDATA[DarkTheme]]></code>
+      <code><![CDATA[DefaultTheme]]></code>
+      <code><![CDATA[DyslexiaFont]]></code>
+      <code><![CDATA[HighContrastTheme]]></code>
+      <code><![CDATA[LightTheme]]></code>
+      <code><![CDATA[ThemesService]]></code>
+    </UndefinedClass>
+    <UndefinedMethod>
+      <code><![CDATA[registerService]]></code>
+    </UndefinedMethod>
+  </file>
+  <file src="lib/Service/OverrideThemesService.php">
+    <UndefinedClass>
+      <code><![CDATA[ThemesService]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Themes/OverrideDefaultTheme.php">
+    <UndefinedClass>
+      <code><![CDATA[DefaultTheme]]></code>
+      <code><![CDATA[ITheme]]></code>
+    </UndefinedClass>
+  </file>
+</files>

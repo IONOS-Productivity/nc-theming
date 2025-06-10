@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * SPDX-FileLicenseText: 2025 STRATO GmbH
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+
+namespace OC\AppFramework\DependencyInjection {
+	class DIContainer {
+	}
+}
+
+namespace OCA\Theming {
+	use OCA\Theming\Service\BackgroundService;
+	use OCA\Files\IAppData;
+	use OCP\ICacheFactory;
+	use OCP\IConfig;
+	use OCP\ITempManager;
+	use OCP\IURLGenerator;
+	use PSR\Log\LoggerInterface;
+
+	class ImageManager {
+		public function __construct(
+			IConfig $config,
+			IAppData $appData,
+			IURLGenerator $urlGenerator,
+			ICacheFactory $cacheFactory,
+			LoggerInterface $logger,
+			ITempManager $tempManager,
+			BackgroundService $backgroundService
+		) {
+		}
+	}
+}
