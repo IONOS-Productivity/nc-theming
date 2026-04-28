@@ -322,11 +322,6 @@
 		gap: 8px;
 	}
 
-	/* drop down chevron-up and down icon */
-	.vs__open-indicator-button svg{
-		height: 24px;
-		width: 24px;
-	}
 }
 
 #body-user, #body-public {
