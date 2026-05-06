@@ -109,8 +109,6 @@
 
 				.vue-crumb__separator {
 					color: var(--ion-breadcrumb-text);
-					width: 16px;
-					height: 16px;
 				}
 			}
 		}
