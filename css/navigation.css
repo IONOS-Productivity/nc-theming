@@ -12,8 +12,6 @@
 		.app-navigation-entry {
 			span[role=img]>svg {
 				color: var(--ion-button-sidebar-text);
-				height: 16px;
-				width: auto;
 			}
 			.app-navigation-entry__name {
 				font-weight: 600;
