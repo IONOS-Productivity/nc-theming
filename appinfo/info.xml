@@ -5,7 +5,7 @@
 	<name>Nc Theming</name>
 	<summary>An app that replaces Nextcloud's internal theming services to inject custom styles and colors</summary>
 	<description>An app that replaces Nextcloud's internal theming services to inject custom styles and colors.</description>
-	<version>31.0.3</version>
+	<version>32.0.6</version>
 	<licence>agpl</licence>
 	<author mail="kupriyanov@strato.de" homepage="https://github.com/IONOS-Productivity/nc-theming/">IONOS</author>
 	<namespace>NcTheming</namespace>
