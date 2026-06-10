@@ -66,6 +66,10 @@ class OverrideDefaultTheme extends DefaultTheme implements ITheme {
 	}
 
 	public function getCSSVariables(): array {
+		// Set IONOS primary before parent so generatePrimaryVariables() derives
+		// hover states, element text, etc. from the correct color instead of
+		// the purple from OC_Theme::getColorPrimary().
+		$this->primaryColor = '#003d8f';
 		$defaultVariables = parent::getCSSVariables();
 		$originalFontFace = $defaultVariables['--font-face'];
 
