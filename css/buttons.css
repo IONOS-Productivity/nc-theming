@@ -56,49 +56,8 @@
 				}
 			}
 
-			&.button-vue--vue-primary, &.button-vue--vue-error,
-				/* ensure primary type styling of "new" button */
-			&.action-item__menutoggle, &.files-list__header-upload-button--disabled {
-				background-color: var(--ion-button-primary-background-default);
-				border: none;
-
-				.button-vue__text, .button-vue__icon svg {
-					color: var(--ion-button-primary-text);
-				}
-
-				&:disabled {
-					background-color: var(--ion-button-primary-background-disabled);
-					color: var(--ion-button-primary-text-disabled);
-				}
-
-				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-button-primary-background-hover);
-					border-color: var(--ion-button-primary-background-hover);
-				}
-
-				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-button-primary-background-active);
-					border-color: var(--ion-button-primary-background-active);
-				}
-			}
-
-			&.button-vue--vue-tertiary:not(.files-list__row-action-sharing-status):not(table th button):not(li.vue-crumb a):not([aria-label="Cancel"]),
-			&[class*="files-list__row-actions-"] {
-				background-color: var(--ion-button-tertiary-background-default);
-				border: none;
-
-				.button-vue__text, .button-vue__icon svg {
-					color: var(--ion-button-tertiary-text);
-				}
-
-				&:hover {
-					background-color: var(--ion-button-tertiary-background-hover);
-				}
-
-				&:active {
-					background-color: var(--ion-button-tertiary-background-active);
-				}
-			}
+			/* NC drives primary via --color-primary-element */
+			/* NC drives tertiary via --color-primary-element-light */
 
 			.action-item {
 				.button-vue__text, .button-vue__icon svg {
@@ -125,26 +84,6 @@
 		}
 
 		&.button-vue--text-only {
-			&.button-vue--vue-primary, &.button-vue--vue-error {
-				background-color: var(--ion-button-primary-background-default);
-				color: var(--ion-button-primary-text);
-
-				&:disabled {
-					background-color: var(--ion-button-primary-background-disabled);
-					color: var(--ion-button-primary-text-disabled);
-				}
-
-				&:hover:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-button-primary-background-hover);
-					border-color: var(--ion-button-primary-background-hover);
-				}
-
-				&:active:not(:disabled):not(.button-vue--disabled) {
-					background-color: var(--ion-button-primary-background-active);
-					border-color: var(--ion-button-primary-background-active);
-				}
-			}
-
 			&.button-vue--vue-secondary, &.button-vue--vue-tertiary[aria-label="Cancel"] {
 				background-color: var(--ion-button-secondary-background-default);
 				border: var(--ion-button-secondary-border-default);
@@ -186,28 +125,28 @@
 			margin: auto 0;
 			&.button-vue--vue-tertiary {
 				.button-vue__icon span[role=img]>svg {
-					color: var(--ion-button--icon-only-text)
+					color: light-dark(var(--ion-color-blue-b4), var(--ion-color-cool-grey-c3));
 				}
 
 				&[class^="files-list__header-"], &.app-navigation-toggle {
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-button-tertiary-text);
+						color: var(--color-main-text);
 					}
 				}
 
 				&:hover:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse):not(.files-list__header-grid-button) {
-					background-color: var(--ion-button--icon-only-background-hover);
+					background-color: var(--ion-color-blue-b4);
 
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-button--icon-only-text-hover);
+						color: #fff;
 					}
 				}
 
 				&:active:not(:disabled):not(.button-vue--disabled):not(&.modal-container__close):not(.icon-collapse):not(.files-list__header-grid-button) {
-					background-color: var(--ion-button--icon-only-background-active);
+					background-color: light-dark(var(--ion-color-blue-b6), var(--ion-color-blue-b3));
 
 					.button-vue__icon span[role=img]>svg {
-						color: var(--ion-button--icon-only-text-hover);
+						color: #fff;
 					}
 				}
 
@@ -221,7 +160,7 @@
 					&:active {
 						background-color: transparent;
 						.button-vue__icon span[role=img]>svg {
-							color: var(--ion-color-typo-mild);
+							color: var(--ion-color-primary);
 						}
 					}
 				}
@@ -245,7 +184,7 @@
 						background-color: transparent;
 
 						.button-vue__icon span[role=img]>svg {
-							color: var(--ion-color-typo-mild);
+							color: var(--color-main-text);
 						}
 					}
 				}
@@ -281,7 +220,7 @@
 				padding: 0 12px;
 
 				.button-vue__text, .files-list__column-sort-button-text {
-					color: var(--ion-color-typo-mild);
+					color: var(--color-main-text);
 					font-weight: 600;
 				}
 				.button-vue__icon {
@@ -290,7 +229,7 @@
 					max-width: max-content;
 
 					span[role=img]>svg {
-						color: var(--ion-color-typo-mild);
+						color: var(--color-main-text);
 					}
 				}
 
@@ -368,7 +307,7 @@
 	.viewer__image-editor, div#SfxPopper, div.SfxModal-Wrapper {
 		@media (prefers-color-scheme: dark) {
 			div.FIE_tab, .FIE_tools-items div, .SfxPopper-root div, .SfxSelect-root {
-				background-color: var(--ion-surface-secondary);
+				background-color: var(--color-background-plain);
 
 				&[aria-selected="true"] {
 					border: var(--ion-button-secondary-border-default);
@@ -381,7 +320,7 @@
 			}
 
 			button, .SfxMenuItem-root {
-				background-color: var(--ion-surface-secondary);
+				background-color: var(--color-background-plain);
 				color: var(--ion-button-secondary-text);
 
 				&:disabled {
@@ -397,10 +336,10 @@
 				}
 
 				&[color="primary"] {
-					background-color: var(--ion-button-primary-background-default) !important;
+					background-color: var(--color-primary-element) !important;
 
 					&:hover {
-						background-color: var(--ion-button-primary-background-hover) !important;
+						background-color: var(--color-primary-element-hover) !important;
 					}
 				}
 			}
@@ -423,8 +362,8 @@
 
 #body-login {
 	a.button:hover {
-		background-color: var(--ion-button-tertiary-background-hover);
-		color: var(--ion-button-tertiary-text-hover);
+		background-color: var(--color-primary-element-light-hover);
+		color: var(--color-primary-element-light-text);
 	}
 	a.button:focus {
 		background-color: var(--color-main-background);

@@ -283,14 +283,14 @@
 					button.button-vue--vue-secondary.action-item__menutoggle[id*="trigger-menu"] {
 						background-color: var(--ion-dialog-filter-button-background);
 						&:hover {
-							background-color: var(--ion-button-tertiary-background-hover);
+							background-color: var(--color-primary-element-light-hover);
 						}
 						&:active {
-							background-color: var(--ion-button-tertiary-background-active);
+							background-color: var(--color-primary-element-light);
 						}
 						span.button-vue__wrapper {
 							span.button-vue__text, .button-vue__icon svg {
-								color: var(--ion-button-tertiary-text) !important;
+								color: var(--color-primary-element-light-text) !important;
 							}
 						}
 					}
@@ -317,7 +317,7 @@
 
 			.unified-search-modal__results {
 				h4.result-title {
-					color: var(--ion-text);
+					color: var(--color-main-text);
 				}
 
 				ul.result-items {
@@ -367,10 +367,10 @@
 
 			.file-picker__side li {
 				.button-vue--vue-primary.button-vue--icon-and-text {
-					background-color: var(--ion-button-sidebar-background-active) !important;
+					background-color: var(--color-primary-element) !important;
 
 					.button-vue__text, .button-vue__icon svg {
-						color: var(--ion-button-tertiary-text);
+						color: var(--color-primary-element-light-text);
 					}
 				}
 
@@ -378,11 +378,11 @@
 					background-color: transparent !important;
 
 					&:hover {
-						background-color: var(--ion-button-sidebar-background-hover) !important;
+						background-color: var(--color-background-hover) !important;
 					}
 
 					&:active {
-						background-color: var(--ion-button-sidebar-background-active) !important;
+						background-color: var(--color-primary-element) !important;
 					}
 				}
 

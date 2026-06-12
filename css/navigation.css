@@ -8,36 +8,36 @@
 	}
 
 	div[data-cy-files-navigation].app-navigation:has(nav#app-navigation-vue) {
-		background-color: var(--ion-surface-secondary);
+		background-color: var(--color-background-plain);
 		.app-navigation-entry {
 			span[role=img]>svg {
-				color: var(--ion-button-sidebar-text);
+				color: var(--color-main-text);
 				height: 16px;
 				width: auto;
 			}
 			.app-navigation-entry__name {
 				font-weight: 600;
-				color: var(--ion-button-sidebar-text) !important;
+				color: var(--color-main-text) !important;
 			}
 			border-radius: var(--border-radius-pill);
 			&.active {
-				background-color: var(--ion-button-sidebar-background-active) !important;
+				background-color: var(--color-primary-element) !important;
 				.app-navigation-entry-link {
-					color: var(--ion-button-sidebar-text) !important;
+					color: var(--color-main-text) !important;
 				}
 			}
 			&:hover {
-				background-color: var(--ion-button-sidebar-background-hover);
+				background-color: var(--color-background-hover);
 			}
 
 			/* fix Storage Quota color after click */
 			&:focus-within:not(:active) {
-				background-color: var(--ion-surface-secondary);
+				background-color: var(--color-background-plain);
 			}
 		}
 
 		.app-navigation-entry--opened:has(.app-navigation-entry__children) {
-			background: var(--ion-surface-primary);
+			background: var(--color-main-background);
 			border-radius: 8px;
 			.app-navigation-entry__children {
 				padding: 0 8px;
@@ -46,7 +46,7 @@
 					border-radius: 4px;
 				}
 				.app-navigation-entry-wrapper {
-					background: var(--ion-surface-primary);
+					background: var(--color-main-background);
 					border-radius: 8px;
 					min-height: 40px;
 					margin: 4px 0;
@@ -57,17 +57,17 @@
 		/* Navigation Toggle Button */
 		div.app-navigation-toggle-wrapper button.app-navigation-toggle.button-vue--icon-only {
 			margin: 18px 0;
-			background-color: var(--ion-button-sidebar--icon-only-background) !important;
+			background-color: var(--color-background-plain) !important;
 			@media only screen and (max-width: 1023px) {
 				margin: 12px 0;
 			}
 			span[role=img]>svg {
-				color: var(--ion-button-sidebar--icon-only-text) !important;
+				color: var(--color-main-text) !important;
 			}
 			&:hover {
-				background-color: var(--ion-button-sidebar--icon-only-background-hover) !important;
+				background-color: var(--color-background-hover) !important;
 				span[role=img]>svg {
-					color: var(--ion-button-sidebar--icon-only-text) !important;
+					color: var(--color-main-text) !important;
 				}
 			}
 		}
@@ -79,12 +79,12 @@
 			span[role=img]>svg {
 				height: 16px;
 				width: 16px;
-				color: var(--ion-button-sidebar-text);
+				color: var(--color-main-text);
 			}
 			&:hover {
 				background-color: transparent;
 				span[role=img]>svg {
-					color: var(--ion-button-sidebar-text);
+					color: var(--color-main-text);
 				}
 			}
 		}
