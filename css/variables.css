@@ -1,12 +1,43 @@
 :root {
-	/* Text colors */
+	/* ── IONOS color palette ──────────────────────────────────────────────── */
+	--ion-color-blue-b1: #dbedf8;
+	--ion-color-blue-b2: #95caeb;
+	--ion-color-blue-b3: #3196D6;
+	--ion-color-blue-b4: #1474c4;
+	--ion-color-blue-b5: #095BB1;
+	--ion-color-blue-b6: #003D8F;
+	--ion-color-blue-b7: #0B2A63;
+	--ion-color-blue-b8: #001B41;
+	--ion-color-blue-b9: #02102B;
+	--ion-color-cool-grey-c1: #f4f7fa;
+	--ion-color-cool-grey-c2: #dbe2e8;
+	--ion-color-cool-grey-c3: #bcc8d4;
+	--ion-color-cool-grey-c4: #97A3B4;
+	--ion-color-cool-grey-c5: #718095;
+	--ion-color-cool-grey-c6: #465A75;
+	--ion-color-cool-grey-c7: #2E4360;
+	--ion-color-cool-grey-c8: #1D2D42;
+	--ion-color-light-grey: #d7d7d7;
+	--ion-color-green-g3: #12cf76;
+	--ion-color-rose-r3: #ff6159;
+	--ion-color-sky-s3: #11c7e6;
+	--ion-color-amber-y3: #ffaa00;
+	--ion-color-amber-y4: #EF8300;
+	--ion-color-amber-y5: #c36b00;
+	--ion-color-amber-y6: #8E4E00;
+
+	/* computed from palette — defined after raw values to allow var() references */
+	--ion-color-main-background: light-dark(#fff, var(--ion-color-blue-b9));
+	--ion-color-primary: #003d8f;
+	--ion-color-secondary: #001B41;
+	--ion-color-typo-mild: light-dark(var(--ion-color-cool-grey-c7), var(--ion-color-cool-grey-c1));
+
+	/* ── IONOS semantic tokens ────────────────────────────────────────────── */
 	--ion-text: light-dark(var(--ion-color-secondary), var(--ion-color-cool-grey-c1));
 	--ion-text-bright: var(--ion-color-cool-grey-c7);
 	--ion-text-dimm: var(--ion-color-blue-b9);
 	--ion-text-disabled: var(--ion-color-cool-grey-c4);
-	--ion-text-high-contrast: var(#000);
-
-	--color-background-plain: var(--ion-color-main-background);
+	--ion-text-high-contrast: #000;
 
 	--ion-breadcrumb-text-default: light-dark(var(--ion-color-secondary), var(--ion-color-cool-grey-c1));
 	--ion-breadcrumb-text-hover: var(--ion-color-blue-b4);
@@ -83,4 +114,31 @@
 
 	--ion-chip-background: light-dark(var(--ion-color-blue-b4), var(--ion-color-cool-grey-c6));
 	--ion-chip-text: #fff;
+
+	/* ── NC semantic overrides ────────────────────────────────────────────── */
+	--color-main-background: var(--ion-color-main-background);
+	--color-primary: var(--ion-color-primary);
+	--color-primary-element: light-dark(var(--ion-color-blue-b7), var(--ion-color-blue-b4));
+	--color-primary-element-hover: light-dark(var(--ion-color-blue-b4), var(--ion-color-blue-b5));
+	--color-background-plain: light-dark(var(--ion-color-cool-grey-c1), var(--ion-color-cool-grey-c8));
+	--color-background-hover: light-dark(var(--ion-color-blue-b1), var(--ion-color-cool-grey-c7));
+	--color-main-text: var(--ion-color-typo-mild);
+	--color-text-maxcontrast: var(--ion-color-typo-mild);
+	--color-text-maxcontrast-default: var(--ion-color-typo-mild);
+	--color-text-maxcontrast-background-blur: var(--ion-color-typo-mild);
+	--color-text-light: var(--color-main-text);
+	--color-text-lighter: var(--color-text-maxcontrast);
+	--color-scrollbar: var(--ion-color-typo-mild);
+	--color-error: var(--ion-color-rose-r3);
+	--color-warning: var(--ion-color-amber-y3);
+	--color-success: var(--ion-color-green-g3);
+	--color-info: var(--ion-color-sky-s3);
+	--color-favorite: var(--ion-color-amber-y3);
+	--color-shadow-header: light-dark(rgba(113, 128, 149, 0.5), rgba(113, 128, 149, 0.2));
+	--default-font-size: 15px;
+	--font-face: "Open sans", Arial, Helvetica, sans-serif;
+	--background-invert-if-dark: no;
+	--background-invert-if-bright: invert(100%);
+	--background-image-invert-if-bright: no;
+	--background-image-color-text: #ffffff;
 }
